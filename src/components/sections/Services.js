@@ -15,8 +15,8 @@ const Services = () => {
         },
         {
             icon: 'fas fa-oil-can',
-            title: 'Maintenance',
-            description: 'Leather treatment and dent removal to restore both your car’s interior comfort and its exterior finish.'
+            title: 'Polishing',
+            description: 'Leather treatment and Polishing to restore both your car’s interior comfort and its exterior finish.'
         }
     ];
 

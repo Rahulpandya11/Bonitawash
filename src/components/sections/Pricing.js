@@ -93,7 +93,7 @@ const Pricing = () => {
                 </div>
                 <p className="price-note">* PRICE MAY VARY DUE TO THE CONDITION OR SIZE OF VEHICLE</p>
                 <div className="additional-service">
-                    <h4>PAINLESS DENT REMOVAL</h4>
+                    <h4>PAINLESS WASHING, DETAILING & POLISHING</h4>
                     <p>FREE QUOTE - Contact us for details</p>
                 </div>
             </div>

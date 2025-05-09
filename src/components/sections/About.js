@@ -65,10 +65,12 @@ const About = () => {
                 <div className="about-header">
                     <h1>Show your car some love.</h1>
                     <p>
-                        Get one of our detail services at our shop or at home with our mobile service. All our detailers passed 
-                        background checks, are friendly and reliable. We carry our own water and electricity generators for 
-                        your absolute convenience. We offer door to door pick up service as well. Transparent pricing and 5-Star 
-                        Service is what makes us California Top Choice.
+                        Bring your car to our shop and let’s make it shine like new!
+                        We offer expert polishing, deep washing, premium waxing, leather
+                        seat cleaning, and headlamp restoration — all designed to give your
+                        car that fresh, showroom look. Our skilled team takes care of every
+                        detail so you can drive away feeling proud of your ride. Visit us today
+                        and give your car the care it deserves!.
                     </p>
                 </div>
 
@@ -88,7 +90,7 @@ const About = () => {
                             onPlay={handleVideoPlay}
                             poster="/images/car-detailing-thumb.jpg"
                         >
-                            <source src="/videos/detailing-process.mp4" type="video/mp4" />
+                            <source src="/images/detailing-process.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
                         {!isPlaying && (
@@ -147,18 +149,21 @@ const About = () => {
 
                 <div className="about-gallery-section">
                     <div className="about-gallery-text">
-                        <h2>Mobile Detailing Service By Certified Professionals</h2>
+                        <h2>Premium Wax Service</h2>
                         <p>
-                            We are one of the only mobile detailer in Corona, California, that uses biodegradable products! 
-                            Our eco-friendly products make us stand out from other businesses and will leave your car looking fabulous 
-                            without any harsh chemicals, smells, or stains on the vehicle. We come directly to you for all our auto detail services, 
-                            so there's no need to waste precious time traveling to an automatic car wash to get a sub-par clean.
+                            Give your car that deep, glossy shine it deserves with our expert wax service. We use
+                            high-quality products that protect your paint from sun damage, rain, and road grime, while
+                            bringing out a smooth,mirror-like finish. Whether you want to maintain your car's value or simply
+                            enjoy that just-waxed look, our team ensures your car stands out on the road. Get ready for
+                            long-lasting protection and a shine you can be proud of!
                         </p>
-                        <h3>Ideal Detail Is A Mobile Car Wash In Corona, California</h3>
+                        <h3>Leather & Interior Cleaning</h3>
                         <p>
-                            We provide complete cleaning packages for your car, including interior upholstery and exterior detailing services as well! 
-                            We service the entire Corona, California Metropolitan Area. If you require auto detailing services, please get in touch 
-                            with Ideal Detail over the phone or make an appointment online when your schedule allows you.
+                            Refresh and renew your car’s interior with our specialized leather and interior cleaning
+                            service. We gently clean and condition leather seats, removing dirt, stains, and wear marks
+                            while restoring their natural softness and luster. Our deep cleaning covers carpets, dashboards,
+                            and every corner, leaving your cabin fresh, spotless, and smelling great. Step back into a car that
+                            feels as good as new — inside and out!
                         </p>
                     </div>
                     <div className="about-gallery-images">

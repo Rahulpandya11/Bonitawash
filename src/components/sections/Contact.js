@@ -64,7 +64,7 @@ const Contact = () => {
                             <i className="fas fa-envelope"></i>
                             <div>
                                 <h3>Email</h3>
-                                <p><a href="mailto:info@bonitacarwash.com">info@bonitacarwash.com</a></p>
+                                <p><a href="mailto:info@bonitacarwash.com">bonitacarwash27x7@gmail.com</a></p>
                             </div>
                         </div>
                     </div>
@@ -112,7 +112,7 @@ const Contact = () => {
                                     <option value="ultra">Ultra Detail - $300</option>
                                     <option value="luxury">Luxury Detail - $250</option>
                                     <option value="super">Super Detail - $200</option>
-                                    <option value="dent">Dent Removal</option>
+                                    <option value="dent">Polishing</option>
                                     <option value="other">Other Service</option>
                                 </select>
                             </div>

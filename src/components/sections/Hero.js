@@ -7,7 +7,7 @@ const Hero = () => {
         <section className="hero" id="home">
             <div className="main-container">
                 <div className="hero-content">
-                    <h1>Premium Car Wash & Maintenance</h1>
+                    <h1>Premium Car Wash & Detailing</h1>
                     <p className="hero-subtitle">Expert detailing, quick service, and long-lasting protection for your vehicle.</p>
                     <div className="hero-buttons">
                         <button 

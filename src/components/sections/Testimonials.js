@@ -15,16 +15,16 @@ const Testimonials = () => {
                             ))}
                         </div>
                         <div className="review-info">
-                            <span className="review-count">92 reviews</span>
-                            <img src="/images/google.png" alt="Google" className="google-logo" />
+                            <span className="review-count">447 reviews</span>
+                            <img src="/images/google.jpeg" alt="Google" className="google-logo" />
                         </div>
                     </div>
                     
                     {/* Description only visible on desktop */}
                     <div className="service-description">
                         <p>
-                            Here at <span className="highlight">Ideal Detail</span>, our team doesn't just vacuum and wash 
-                            vehicles — we <span className="highlight">restore, protect, and maintain</span> them. Our expert 
+                            Here at <span className="highlight">Bonita Car Wash</span>, our team doesn't just vacuum and wash 
+                            vehicles — we <span className="highlight">restore, protect, and polish</span> them. Our expert 
                             detailing service guarantees to restore your vehicle to a like new or 
                             better than new condition. Whatever your needs may be, we are 
                             equipped with specialized tools and innovative methods to deliver 
@@ -36,11 +36,11 @@ const Testimonials = () => {
                 
                 <div className="team-image-container">
                     <div className="team-image">
-                        <img src="/images/20250225-DSC04921-Enhanced-NR.jpg" alt="Our Team" />
+                        <img src="/images/About-us.jpg" alt="Our Team" />
                     </div>
                     <div className="since-text">
                         <i className="fas fa-heart"></i>
-                        <span>Your Local Detailing Choice Since 2017</span>
+                        <span>Your Local Detailing Choice Since 2008</span>
                     </div>
                 </div>
 
@@ -51,12 +51,12 @@ const Testimonials = () => {
 
                 <div className="services-list">
                     {[
-                        'Steam cleaning',
-                        'Paint correction',
-                        'Minor scratch removal',
-                        'Ozone treatment',
-                        'Carpet extraction',
-                        'Various paint sealants and waxes'
+                        'Wheel Polish',
+                        'Interior Shampoo',
+                        'Complete Dressing',
+                        'Clay Treatment',
+                        'Carnauba Paste Wax',
+                        '100% Hand Wash'
                     ].map((service, index) => (
                         <div key={index} className="service-item">
                             <i className="fas fa-check"></i>
