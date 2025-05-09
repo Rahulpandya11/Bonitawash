@@ -1,0 +1,263 @@
+.testimonials {
+    background: var(--dark);
+    padding: 4rem 0;
+    width: 100%;
+    position: relative;
+}
+
+.testimonials-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.testimonials-text {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.testimonials-text h1 {
+    font-size: 2.5rem;
+    color: var(--light);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.review-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.review-label {
+    font-weight: 600;
+    color: var(--light);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+.stars {
+    color: #fbbc04;
+    display: flex;
+    gap: 2px;
+    font-size: 1.2rem;
+    margin: 0.25rem 0;
+}
+
+.review-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.review-count {
+    color: var(--light);
+    font-size: 0.9rem;
+}
+
+.google-logo {
+    height: 20px;
+    width: auto;
+}
+
+.service-description {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.service-description p {
+    color: var(--gray);
+    line-height: 1.6;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.highlight {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.service-button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.service-button:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.team-image-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.team-image {
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+
+.team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.since-text {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--light);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.since-text i {
+    color: var(--primary);
+}
+
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    width: 100%;
+    grid-column: 1 / -1;
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+.service-item i {
+    color: var(--primary);
+}
+
+@media (max-width: 768px) {
+    .testimonials-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .testimonials-text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Title and Review Section */
+    .testimonials-text h1,
+    .review-section {
+        order: -1;
+    }
+
+    /* Hide description in mobile */
+    .service-description p {
+        display: none;
+    }
+
+    /* Image Section */
+    .team-image-container {
+        order: 0;
+        margin: 2rem auto 1rem;
+    }
+
+    /* Button styling for mobile */
+    .service-button {
+        order: 1;
+        width: 90%;
+        margin: 0 auto 1rem;
+        justify-content: center;
+        background: transparent;
+        color: var(--light);
+        border: 2px solid var(--primary);
+        padding: 0.8rem 1.5rem;
+    }
+
+    .service-button:hover {
+        background: var(--primary);
+        transform: none;
+    }
+
+    .team-image {
+        height: 300px;
+    }
+
+    /* Services List */
+    .services-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        order: 2;
+        margin-top: 0.5rem;
+    }
+
+    .service-item {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonials {
+        padding: 3rem 0;
+    }
+
+    .testimonials-text h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .team-image {
+        height: 250px;
+        margin: 1.5rem 0;
+    }
+
+    .since-text {
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .service-button {
+        width: 85%;
+        font-size: 0.9rem;
+        padding: 0.7rem 1.2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .services-list {
+        gap: 0.5rem;
+    }
+} 

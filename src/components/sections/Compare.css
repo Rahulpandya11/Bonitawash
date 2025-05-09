@@ -1,0 +1,114 @@
+.compare-section {
+    background: var(--dark);
+    padding: 4rem 0 2rem 0;
+    text-align: center;
+    font-family: inherit;
+  }
+  
+  .compare-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--light);
+    margin-bottom: 1rem;
+    font-family: inherit;
+  }
+  
+  .compare-subtitle {
+    color: var(--gray);
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 2.5rem auto;
+    line-height: 1.6;
+    font-family: inherit;
+  }
+  
+  .compare-table-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .compare-table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 800px;
+    background: var(--dark-gray);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.10);
+    font-family: inherit;
+  }
+  
+  .compare-table th,
+  .compare-table td {
+    padding: 1rem 0.8rem;
+    font-size: 1rem;
+    color: var(--light);
+    border: 1px solid var(--gray);
+    text-align: left;
+    font-family: inherit;
+  }
+  
+  .compare-table th {
+    background: var(--primary-dark);
+    color: var(--light);
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  .tunnel-header {
+    background: var(--primary-dark);
+  }
+  
+  .hand-header {
+    background: var(--primary);
+  }
+  
+  .compare-label {
+    font-weight: 600;
+    color: var(--primary);
+    background: var(--dark);
+    min-width: 140px;
+    font-family: inherit;
+  }
+  
+  .compare-icon {
+    font-weight: bold;
+    margin-right: 0.5em;
+    font-size: 1.1em;
+    font-family: inherit;
+  }
+  
+  .compare-check {
+    color: #1db954;
+  }
+  
+  .compare-cross {
+    color: #e63946;
+  }
+  
+  @media (max-width: 900px) {
+    .compare-table th,
+    .compare-table td {
+      padding: 0.7rem 0.4rem;
+      font-size: 0.95rem;
+    }
+    .compare-title {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .compare-table-wrapper {
+      overflow-x: auto;
+    }
+    .compare-table {
+      min-width: 600px;
+      font-size: 0.95rem;
+    }
+    .compare-title {
+      font-size: 1.3rem;
+    }
+  }
+  

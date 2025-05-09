@@ -1,0 +1,151 @@
+.header {
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.4s cubic-bezier(0.4,0,0.2,1), padding 0.3s;
+}
+
+.header.scrolled {
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 0.8rem 0;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.25rem;
+    transition: opacity 0.3s;
+}
+
+.logo a:hover {
+    opacity: 0.8;
+}
+
+.logo-icon {
+    margin-right: 8px;
+    font-size: 1.4rem;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s;
+    padding: 0.5rem 0;
+}
+
+.nav-links a:hover {
+    color: #4287f5;
+}
+
+.nav-links li::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #4287f5;
+    transition: width 0.3s;
+}
+
+.nav-links li:hover::after {
+    width: 100%;
+}
+
+.book-now {
+    background-color: #4287f5;
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.book-now:hover {
+    background-color: #2d6edb;
+    transform: translateY(-1px);
+}
+
+.mobile-menu-btn {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+    background: none;
+    border: none;
+    padding: 0.5rem;
+}
+
+@media (max-width: 992px) {
+    .navbar {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: #000;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 5rem 2rem;
+        transition: right 0.3s ease;
+    }
+
+    .navbar.active {
+        right: 0;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .nav-links li::after {
+        display: none;
+    }
+
+    .book-now {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+        z-index: 1001;
+    }
+} 
