@@ -90,7 +90,7 @@ const About = () => {
                             onPlay={handleVideoPlay}
                             poster="/images/car-detailing-thumb.jpg"
                         >
-                            <source src="/images/detailing-process.mp4" type="video/mp4" />
+                            <source src="/images/detailing-process-v2.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
                         {!isPlaying && (
