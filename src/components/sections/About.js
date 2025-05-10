@@ -34,7 +34,6 @@ const About = () => {
             event.preventDefault();
         };
 
-        // Add global event listeners
         if (isDragging) {
             document.addEventListener('mousemove', handleGlobalMouseMove);
             document.addEventListener('mouseup', handleGlobalMouseUp);
@@ -42,19 +41,17 @@ const About = () => {
             document.addEventListener('touchend', handleGlobalMouseUp);
         }
 
-        // Cleanup function
         return () => {
             document.removeEventListener('mousemove', handleGlobalMouseMove);
             document.removeEventListener('mouseup', handleGlobalMouseUp);
             document.removeEventListener('touchmove', handleGlobalTouchMove);
             document.removeEventListener('touchend', handleGlobalMouseUp);
         };
-    }, [isDragging]); // Only re-run effect when isDragging changes
+    }, [isDragging]);
 
     const handleDragStart = (event) => {
         if (event.target.closest('.slider-handle')) {
             setIsDragging(true);
-            // Prevent text selection during drag
             event.preventDefault();
         }
     };
@@ -85,20 +82,23 @@ const About = () => {
                                 one of a kind corvette, the transformation is night and day.
                             </p>
                         </div>
-                        <video 
-                            controls
-                            onPlay={handleVideoPlay}
-                            poster="/images/car-detailing-thumb.jpg"
-                        >
-                            <source src="/images/detailing-process.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
-                        {!isPlaying && (
+                        {isPlaying ? (
+                            <iframe
+                                width="100%"
+                                height="500"
+                                src="https://www.youtube.com/embed/h5-Kq9k3zeo?si=LpMAHxU0AKSQ853v&rel=0&autoplay=1"
+                                title="YouTube video player"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen
+                            ></iframe>
+                        ) : (
                             <div className="video-overlay">
+                                <img src="/images/car-detailing-thumb.jpg" alt="Video Thumbnail" className="video-thumbnail" />
                                 <button className="watch-button" onClick={handleVideoPlay}>
                                     <span>Watch</span>
                                     <svg viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M8 5v14l11-7z"/>
+                                        <path d="M8 5v14l11-7z" />
                                     </svg>
                                 </button>
                             </div>
@@ -178,4 +178,4 @@ const About = () => {
     );
 };
 
-export default About; 
+export default About;
