@@ -112,7 +112,7 @@ const Contact = () => {
                                     <option value="ultra">Ultra Detail - $300</option>
                                     <option value="luxury">Luxury Detail - $250</option>
                                     <option value="super">Super Detail - $200</option>
-                                    <option value="dent">Polishing</option>
+                                    <option value="Wax">Polishing</option>
                                     <option value="other">Other Service</option>
                                 </select>
                             </div>
