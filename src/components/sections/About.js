@@ -79,7 +79,7 @@ const About = () => {
                         </div>
                         {isPlaying ? (
                             <iframe
-                                width="75%"
+                                width="100%"
                                 height="500"
                                 src="https://www.youtube.com/embed/3WpgFgRWgas?si=s5jHY6QPEaHyNARW&rel=0&autoplay=1"
                                 title="YouTube video player"
