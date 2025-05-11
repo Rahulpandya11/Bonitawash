@@ -29,7 +29,7 @@ const Gallery = () => {
         },
         {
             src: "/images/dent-removal.jpg",
-            caption: "Dent Removal"
+            caption: "Detailing"
         },
         {
             src: "/images/20250225-DSC04946-Enhanced-NR.jpg",
