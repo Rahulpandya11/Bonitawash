@@ -73,13 +73,13 @@ const About = () => {
                             <span className="subtitle">EXPLAINED</span>
                             <p className="duration">2 Min Video</p>
                             <p className="description">
-                                We walk you through our Car Detailing Process from start to finish on a 
-                                one of a kind corvette, the transformation is night and day.
+                                Watch as this iconic Mustang transforms from daily driver to showroom-ready with our 
+                                premium detailing service—every surface cleaned, polished, and protected to perfection.
                             </p>
                         </div>
                         {isPlaying ? (
                             <iframe
-                                width="100%"
+                                width="75%"
                                 height="500"
                                 src="https://www.youtube.com/embed/3WpgFgRWgas?si=s5jHY6QPEaHyNARW&rel=0&autoplay=1"
                                 title="YouTube video player"
