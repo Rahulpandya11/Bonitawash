@@ -36,7 +36,7 @@ const Testimonials = () => {
                 
                 <div className="team-image-container">
                     <div className="team-image">
-                        <img src="/images/About-us.jpg" alt="Our Team" />
+                        <img src="/images/testomorinal.jpg" alt="Our Team" />
                     </div>
                     <div className="since-text">
                         <i className="fas fa-heart"></i>
