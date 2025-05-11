@@ -1,9 +1,9 @@
 .hero {
     height: 100vh;
     min-height: 600px;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                url('https://images.unsplash.com/photo-1607860108855-64acf2078ed9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') 
-                no-repeat center/cover;
+    background: 
+      linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+      url('/images/worker-in-auto-service.jpg') no-repeat center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11,6 +11,7 @@
     padding: 80px 20px 0;
     position: relative;
 }
+
 
 .hero::before {
     content: '';
