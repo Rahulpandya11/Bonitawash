@@ -11,23 +11,18 @@ const About = () => {
         setIsPlaying(true);
     };
 
-    // Add global mouse/touch event handlers
     useEffect(() => {
         const handleGlobalMouseMove = (event) => {
             if (!isDragging || !sliderRef.current) return;
-
             const rect = sliderRef.current.getBoundingClientRect();
             const position = ((event.clientX - rect.left) / rect.width) * 100;
             setSliderPosition(Math.min(Math.max(position, 0), 100));
         };
 
-        const handleGlobalMouseUp = () => {
-            setIsDragging(false);
-        };
+        const handleGlobalMouseUp = () => setIsDragging(false);
 
         const handleGlobalTouchMove = (event) => {
             if (!isDragging || !sliderRef.current || !event.touches[0]) return;
-
             const rect = sliderRef.current.getBoundingClientRect();
             const position = ((event.touches[0].clientX - rect.left) / rect.width) * 100;
             setSliderPosition(Math.min(Math.max(position, 0), 100));
@@ -94,7 +89,6 @@ const About = () => {
                             ></iframe>
                         ) : (
                             <div className="video-overlay">
-                                <img src="/images/car-detailing-thumb.jpg" alt="Video Thumbnail" className="video-thumbnail" />
                                 <button className="watch-button" onClick={handleVideoPlay}>
                                     <span>Watch</span>
                                     <svg viewBox="0 0 24 24" fill="currentColor">
@@ -108,7 +102,7 @@ const About = () => {
 
                 <div className="before-after-section">
                     <h2>See The Difference</h2>
-                    <div 
+                    <div
                         className="image-comparison-slider"
                         ref={sliderRef}
                         onMouseDown={handleDragStart}
@@ -116,29 +110,17 @@ const About = () => {
                     >
                         <div className="comparison-image">
                             <img src="/images/20250225-DSC04949-Enhanced-NR.jpg" alt="Before Car Detailing" />
-                            <span 
-                                className="label before-label"
-                                style={{ opacity: sliderPosition > 80 ? 1 : 0 }}
-                            >
+                            <span className="label before-label" style={{ opacity: sliderPosition > 80 ? 1 : 0 }}>
                                 Before
                             </span>
                         </div>
-                        <div 
-                            className="comparison-image after-image"
-                            style={{ clipPath: `inset(0 0 0 ${sliderPosition}%)` }}
-                        >
+                        <div className="comparison-image after-image" style={{ clipPath: `inset(0 0 0 ${sliderPosition}%)` }}>
                             <img src="/images/20250225-DSC04921-Enhanced-NR.jpg" alt="After Car Detailing" />
-                            <span 
-                                className="label after-label"
-                                style={{ opacity: sliderPosition < 20 ? 1 : 0 }}
-                            >
+                            <span className="label after-label" style={{ opacity: sliderPosition < 20 ? 1 : 0 }}>
                                 After
                             </span>
                         </div>
-                        <div 
-                            className="slider-line"
-                            style={{ left: `${sliderPosition}%` }}
-                        >
+                        <div className="slider-line" style={{ left: `${sliderPosition}%` }}>
                             <div className="slider-handle">
                                 <div className="slider-arrow-left"></div>
                                 <div className="slider-arrow-right"></div>
