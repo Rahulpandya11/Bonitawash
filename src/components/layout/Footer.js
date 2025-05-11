@@ -14,7 +14,7 @@ const Footer = () => {
         { text: 'Ultra Detail', href: '#pricing' },
         { text: 'Luxury Detail', href: '#pricing' },
         { text: 'Super Detail', href: '#pricing' },
-        { text: 'Dent Removal', href: '#pricing' },
+        { text: 'Wax Polishing', href: '#pricing' },
         { text: 'Ceramic Coating', href: '#pricing' }
     ];
 
