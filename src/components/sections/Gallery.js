@@ -8,7 +8,7 @@ const Gallery = () => {
             caption: "After Exterior"
         },
         {
-            src: "/images/wash.jpg",
+            src: "/images/washing-the-suv-car.jpg",
             caption: "Wash Process"
         },
         {
