@@ -109,9 +109,9 @@ const Contact = () => {
                                     required
                                 >
                                     <option value="">Select a service</option>
-                                    <option value="ultra">Ultra Detail - $300</option>
-                                    <option value="luxury">Luxury Detail - $250</option>
-                                    <option value="super">Super Detail - $200</option>
+                                    <option value="ultra">Ultra Detail - $375</option>
+                                    <option value="luxury">Luxury Detail - $325</option>
+                                    <option value="super">Super Detail - $275</option>
                                     <option value="Wax">Polishing</option>
                                     <option value="other">Other Service</option>
                                 </select>
