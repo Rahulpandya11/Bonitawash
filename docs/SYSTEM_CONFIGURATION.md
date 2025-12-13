@@ -18,18 +18,18 @@ TIME: 'entry.1713268624'
 ## Service Packages
 ```javascript
 ULTRA_DETAIL: {
-    name: 'Ultra 300',
-    price: '$300',
+    name: 'Ultra 375',
+    price: '$375',
     duration: '120'
 }
 LUXURY_DETAIL: {
-    name: 'Luxury 250',
-    price: '$250',
+    name: 'Luxury 325',
+    price: '$325',
     duration: '90'
 }
 SUPER_DETAIL: {
-    name: 'Super 200',
-    price: '$200',
+    name: 'Super 275',
+    price: '$275',
     duration: '60'
 }
 ```
@@ -42,7 +42,7 @@ weekdays: {
 }
 weekends: {
     start: '09:00',
-    end: '17:00'
+    end: '16:45'
 }
 ```
 
