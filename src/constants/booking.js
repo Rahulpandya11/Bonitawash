@@ -15,18 +15,18 @@ export const FORM_FIELDS = {
 // Service packages
 export const SERVICES = {
     ULTRA_DETAIL: {
-        name: 'Ultra 300',
-        price: '$300',
+        name: 'Ultra 375',
+        price: '$375',
         duration: '120' // in minutes
     },
     LUXURY_DETAIL: {
-        name: 'Luxury 250',
-        price: '$250',
+        name: 'Luxury 325',
+        price: '$325',
         duration: '90' // in minutes
     },
     SUPER_DETAIL: {
-        name: 'Super 200',
-        price: '$200',
+        name: 'Super 275',
+        price: '$275',
         duration: '60' // in minutes
     }
 };
@@ -39,6 +39,6 @@ export const BUSINESS_HOURS = {
     },
     weekends: {
         start: '09:00',
-        end: '17:00'
+        end: '16:45'
     }
 }; 
