@@ -13,13 +13,13 @@ The booking system consists of:
 
 ## Service Packages
 Current packages configured in the system:
-- Ultra 300 ($300, 120 minutes)
-- Luxury 250 ($250, 90 minutes)
-- Super 200 ($200, 60 minutes)
+- Ultra 375 ($375, 120 minutes)
+- Luxury 325 ($325, 90 minutes)
+- Super 275 ($275, 60 minutes)
 
 ## Business Hours
-- Weekdays: 8:00 AM - 6:00 PM
-- Weekends: 9:00 AM - 5:00 PM
+- Weekdays: 8:00 AM - 4:45 PM
+- Weekends: 9:00 AM - 4:45 PM
 
 ## Important Notes
 1. **DO NOT modify the following without updating the website code:**
