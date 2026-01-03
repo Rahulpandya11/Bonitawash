@@ -15,10 +15,12 @@ const Testimonials = () => {
                                 <i key={i} className="fas fa-star"></i>
                             ))}
                         </div>
-                        <div className="review-info">
-                            <span className="review-count">447 reviews</span>
-                            <img src="/images/google.jpeg" alt="Google" className="google-logo" />
-                        </div>
+                        <a href="https://share.google/GywTiX2meFbm0Rh9R" target="_blank" rel="noopener noreferrer" className="review-info-link">
+                            <div className="review-info">
+                                <span className="review-count">447 reviews</span>
+                                <img src="/images/google.jpeg" alt="Google" className="google-logo" />
+                            </div>
+                        </a>
                     </div>
                     
                     {/* Description only visible on desktop */}
