@@ -1,7 +1,12 @@
 import React from 'react';
 import './Services.css';
+import { openBookingForm } from '../../utils/booking';
 
 const Services = () => {
+    const handleBookPackage = (packageName) => {
+        openBookingForm(packageName);
+    };
+
     const mainPackages = [
         {
             title: 'EXPRESS HAND WASH',
@@ -129,6 +134,12 @@ const Services = () => {
                                     </li>
                                 ))}
                             </ul>
+                            <button 
+                                className="book-package-btn"
+                                onClick={() => handleBookPackage(pkg.title)}
+                            >
+                                Book This Package
+                            </button>
                         </div>
                     ))}
                 </div>
@@ -140,6 +151,12 @@ const Services = () => {
                             <div className="ala-carte-item" key={index}>
                                 <span className="item-name">{item.name}</span>
                                 <span className="item-price">{item.price}</span>
+                                <button 
+                                    className="book-item-btn"
+                                    onClick={() => handleBookPackage(item.name)}
+                                >
+                                    Book
+                                </button>
                             </div>
                         ))}
                     </div>

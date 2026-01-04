@@ -136,3 +136,51 @@
         padding: 2rem 1.5rem;
     }
 }
+
+.book-package-btn {
+    width: 100%;
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: auto;
+}
+
+.book-package-btn:hover {
+    background: white;
+    color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+.book-item-btn {
+    background: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.book-item-btn:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.service-features {
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+}
