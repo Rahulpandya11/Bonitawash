@@ -1,5 +1,6 @@
 import React from 'react';
 import './Testimonials.css';
+import Review from './Review';
 
 const Testimonials = () => {
     return (
@@ -14,10 +15,12 @@ const Testimonials = () => {
                                 <i key={i} className="fas fa-star"></i>
                             ))}
                         </div>
-                        <div className="review-info">
-                            <span className="review-count">447 reviews</span>
-                            <img src="/images/google.jpeg" alt="Google" className="google-logo" />
-                        </div>
+                        <a href="https://share.google/GywTiX2meFbm0Rh9R" target="_blank" rel="noopener noreferrer" className="review-info-link">
+                            <div className="review-info">
+                                <span className="review-count">447 reviews</span>
+                                <img src="/images/google.jpeg" alt="Google" className="google-logo" />
+                            </div>
+                        </a>
                     </div>
                     
                     {/* Description only visible on desktop */}
@@ -31,6 +34,11 @@ const Testimonials = () => {
                             results that go beyond your expectations. Get in touch with us today, 
                             and see how we can provide services at our shop or at your doorstep.
                         </p>
+                    </div>
+
+                    <div className="yelp-reviews-container">
+                        <h2 className="yelp-title">Latest 5-Star Yelp Reviews</h2>
+                        <Review />
                     </div>
                 </div>
                 

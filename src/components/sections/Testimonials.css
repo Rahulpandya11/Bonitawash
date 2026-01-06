@@ -260,4 +260,34 @@
     .services-list {
         gap: 0.5rem;
     }
-} 
+}     .services-list {
+        gap: 0.5rem;
+    }
+
+.yelp-reviews-container {
+  margin-top: 30px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.yelp-title {
+  font-size: 1.5rem;
+  color: #0056b3;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.review-info-link {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s ease;
+  cursor: pointer;
+}
+
+.review-info-link:hover {
+  opacity: 0.8;
+}
