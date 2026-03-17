@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import './Header.css';
 import { BOOKING_FORM_URL } from '../../constants/booking';
 
-
 const Header = () => {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -44,10 +43,17 @@ const Header = () => {
             <div className="container">
                 <div className="logo">
                     <a href="#home" onClick={handleNavClick}>
-                        <img className="logo-icon" width="40" height="40" src="/images/Bonita-new-image.png" />
+                        <img
+                            className="logo-icon"
+                            width="40"
+                            height="40"
+                            src="/images/Bonita-new-image.png"
+                            alt="Bonita Carwash Logo"
+                        />
                         <span className="logo-text">Bonita Carwash</span>
                     </a>
                 </div>
+
                 <nav className={`navbar ${isMenuOpen ? 'active' : ''}`}>
                     <ul className="nav-links">
                         <li><a href="#home" onClick={handleNavClick}>Home</a></li>
@@ -59,12 +65,14 @@ const Header = () => {
                         <li><a href="#contact" onClick={handleNavClick}>Contact</a></li>
                     </ul>
                 </nav>
+
                 <button
                     className="btn btn-primary book-now"
                     onClick={() => window.open(BOOKING_FORM_URL, '_blank')}
                 >
                     Book Now
                 </button>
+
                 <button className="mobile-menu-btn" onClick={toggleMenu}>
                     <i className={`fas ${isMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
                 </button>
@@ -73,4 +81,4 @@ const Header = () => {
     );
 };
 
-export default Header; 
+export default Header;
