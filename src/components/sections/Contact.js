@@ -50,14 +50,14 @@ const Contact = () => {
                             <div>
                                 <h3>Phone</h3>
                                 <p><a href="tel:9095929666">(909) 592-9666</a></p>
-                                <p>Monday - Sunday: 8AM - 5PM</p>
+                                <p>Monday - Sunday: 8AM - 6PM</p>
                             </div>
                         </div>
                         <div className="info-item">
                             <i className="fas fa-clock"></i>
                             <div>
                                 <h3>Hours</h3>
-                                <p>Mon - Sat: 8:00 AM - 5:00 PM<br />Sunday: 9:00 AM - 5:00 PM</p>
+                                <p>Mon - Sat: 8:00 AM - 6:00 PM<br />Sunday: 8:00 AM - 5:00 PM</p>
                             </div>
                         </div>
                         <div className="info-item">
