@@ -75,8 +75,8 @@ const Footer = () => {
                             <li>555 W Bonita Ave, San Dimas, CA 91773, United States</li>
                             <li>(909) 592-9666</li>
                             <li>
-                                Mon - Sat: 8:00 AM - 5:00 PM<br />
-                                Sunday: 9:00 AM - 5:00 PM
+                                Mon - Sat: 8:00 AM - 6:00 PM<br />
+                                Sunday: 8:00 AM - 5:00 PM
                             </li>
                         </ul>
                     </div>
