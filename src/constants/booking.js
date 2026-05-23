@@ -1,5 +1,7 @@
 // Google Form URL for booking
-export const BOOKING_FORM_URL = process.env.REACT_APP_BOOKING_FORM_URL;
+export const BOOKING_FORM_URL =
+    process.env.REACT_APP_BOOKING_FORM_URL ||
+    'https://docs.google.com/forms/d/e/1FAIpQLSftqTJll5WShR1pTLmsii8JWfIuiPqw9tY0kec5yk57fQQQSA/viewform';
 
 // Form field entry IDs
 export const FORM_FIELDS = {

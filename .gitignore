@@ -22,3 +22,13 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Vercel
+.vercel
+
+# temporary/editor
+*.tmp
+*.temp
+.cache
+.vscode/*
+!.vscode/extensions.json

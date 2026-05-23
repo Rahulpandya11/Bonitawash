@@ -1,14 +1,15 @@
 .header {
-    padding: 1rem 0;
+    padding: 0.85rem 0;
     position: fixed;
     width: 100%;
     z-index: 1000;
-    transition: background-color 0.4s cubic-bezier(0.4,0,0.2,1), padding 0.3s;
+    transition: background-color 0.4s cubic-bezier(0.4,0,0.2,1), padding 0.3s, box-shadow 0.3s;
 }
 
 .header.scrolled {
-    background-color: rgba(0, 0, 0, 0.95);
-    padding: 0.8rem 0;
+    background-color: rgba(11, 16, 32, 0.92);
+    padding: 0.65rem 0;
+    box-shadow: 0 12px 30px rgba(4, 8, 20, 0.35);
 }
 
 .header .container {
@@ -25,7 +26,7 @@
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: #fff;
+    color: #f4f6ff;
     font-weight: 600;
     font-size: 1.25rem;
     transition: opacity 0.3s;
@@ -59,7 +60,7 @@
 }
 
 .nav-links a {
-    color: #fff;
+    color: #d7ddf2;
     text-decoration: none;
     font-weight: 500;
     font-size: 1rem;
@@ -68,7 +69,22 @@
 }
 
 .nav-links a:hover {
-    color: #4287f5;
+    color: #66e6cf;
+}
+
+.nav-links a.active-nav-link {
+    color: #ffffff;
+    position: relative;
+}
+
+.nav-links a.active-nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -4px;
+    height: 2px;
+    background: linear-gradient(90deg, #66e6cf, #3f8cff);
 }
 
 .nav-links li::after {
@@ -78,7 +94,7 @@
     left: 0;
     width: 0;
     height: 2px;
-    background: #4287f5;
+    background: linear-gradient(90deg, #66e6cf, #3f8cff);
     transition: width 0.3s;
 }
 
@@ -87,8 +103,8 @@
 }
 
 .book-now {
-    background-color: #4287f5;
-    color: #fff;
+    background: linear-gradient(120deg, #66e6cf, #3f8cff);
+    color: #081224;
     padding: 0.6rem 1.2rem;
     border-radius: 4px;
     font-weight: 500;
@@ -98,7 +114,7 @@
 }
 
 .book-now:hover {
-    background-color: #2d6edb;
+    background: linear-gradient(120deg, #59d4be, #327ded);
     transform: translateY(-1px);
 }
 

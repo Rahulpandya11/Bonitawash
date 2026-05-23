@@ -1,31 +1,41 @@
 import React from 'react';
 import './styles/main.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import Header from './components/layout/Header';
-import Hero from './components/sections/Hero';
-import Testimonials from './components/sections/Testimonials';
-import Services from './components/sections/Services';
-import Gallery from './components/sections/Gallery';
-import Pricing from './components/sections/Pricing';
-import About from './components/sections/About';
 import Footer from './components/layout/Footer';
+import StickyBookingBar from './components/layout/StickyBookingBar';
 import ScrollToTop from './components/utils/ScrollToTop';
-import Compare from './components/sections/Compare';
+import RouteScrollToTop from './components/utils/RouteScrollToTop';
+import HomePage from './pages/HomePage';
+import ServicesPage from './pages/ServicesPage';
+import PricingPage from './pages/PricingPage';
+import GalleryPage from './pages/GalleryPage';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
 
 function App() {
     return (
-        <div className="App">
-            <Header />
-            <Hero />
-            <Testimonials />
-            <Services />
-            <Gallery />
-            <Pricing />
-            <Compare />
-            <About />
-            <Footer />
-            <ScrollToTop />
-        </div>
+        <BrowserRouter>
+            <RouteScrollToTop />
+            <div className="App app-shell">
+                <Header />
+                <main className="app-main">
+                    <Routes>
+                        <Route path="/" element={<HomePage />} />
+                        <Route path="/services" element={<ServicesPage />} />
+                        <Route path="/pricing" element={<PricingPage />} />
+                        <Route path="/gallery" element={<GalleryPage />} />
+                        <Route path="/about" element={<AboutPage />} />
+                        <Route path="/contact" element={<ContactPage />} />
+                        <Route path="*" element={<Navigate to="/" replace />} />
+                    </Routes>
+                </main>
+                <StickyBookingBar />
+                <Footer />
+                <ScrollToTop />
+            </div>
+        </BrowserRouter>
     );
 }
 

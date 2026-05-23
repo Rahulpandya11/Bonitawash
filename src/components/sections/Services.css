@@ -26,11 +26,13 @@
     transition: transform 0.3s ease;
     border-top: 5px solid var(--primary);
     text-align: left;
+    border: 1px solid rgba(151, 163, 190, 0.22);
 }
 
 .service-card:hover {
     transform: translateY(-10px);
-    border-color: #fff;
+    border-color: rgba(55, 226, 213, 0.6);
+    box-shadow: 0 16px 40px rgba(5, 12, 22, 0.45);
 }
 
 .service-header {
@@ -49,7 +51,7 @@
 }
 
 .price-tag {
-    background: var(--primary);
+    background: linear-gradient(110deg, var(--primary), #ff8e5f);
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 20px;
@@ -106,7 +108,7 @@
 
 .ala-carte-item:hover {
     background: rgba(255, 255, 255, 0.08);
-    border-color: var(--primary);
+    border-color: rgba(55, 226, 213, 0.7);
 }
 
 .item-name {
@@ -139,7 +141,7 @@
 
 .book-package-btn {
     width: 100%;
-    background: var(--primary);
+    background: linear-gradient(120deg, var(--accent), var(--primary));
     color: white;
     border: none;
     padding: 0.8rem;
@@ -151,10 +153,10 @@
 }
 
 .book-package-btn:hover {
-    background: white;
-    color: var(--primary);
+    background: linear-gradient(120deg, var(--primary), #ffa280);
+    color: #fff;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+    box-shadow: 0 8px 22px rgba(255, 106, 61, 0.35);
 }
 
 .book-item-btn {
@@ -171,7 +173,7 @@
 }
 
 .book-item-btn:hover {
-    background: var(--primary);
+    background: linear-gradient(120deg, var(--primary), #ffa280);
     color: white;
 }
 

@@ -139,6 +139,35 @@
     font-size: 1.1rem;
 }
 
+.contact-form .btn + .btn {
+    margin-top: 0.8rem;
+}
+
+.contact-form .btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.contact-status {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    padding: 0.75rem 0.9rem;
+    border: 1px solid transparent;
+}
+
+.contact-status.success {
+    color: #bbffea;
+    background: rgba(55, 226, 213, 0.12);
+    border-color: rgba(55, 226, 213, 0.5);
+}
+
+.contact-status.error {
+    color: #ffd2c9;
+    background: rgba(255, 106, 61, 0.12);
+    border-color: rgba(255, 106, 61, 0.5);
+}
+
 .map-section {
     margin-top: 4rem;
 }

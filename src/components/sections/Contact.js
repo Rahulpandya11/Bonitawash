@@ -1,5 +1,21 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import './Contact.css';
+import { CONTACT_DETAILS } from '../../constants/siteData';
+import { openBookingForm } from '../../utils/booking';
+
+const EMAILJS_SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+const EMAILJS_PUBLIC_KEY = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+const CONTACT_RECEIVER_EMAIL = process.env.REACT_APP_CONTACT_RECEIVER_EMAIL || 'bonitacarwash27x7@gmail.com';
+
+const SERVICE_OPTIONS = {
+    ultra: 'Ultra Detail - $375',
+    luxury: 'Luxury Detail - $325',
+    super: 'Super Detail - $275',
+    Wax: 'Polishing',
+    other: 'Other Service'
+};
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -9,6 +25,8 @@ const Contact = () => {
         service: '',
         message: ''
     });
+    const [isSending, setIsSending] = useState(false);
+    const [status, setStatus] = useState({ type: '', text: '' });
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -18,18 +36,61 @@ const Contact = () => {
         }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Here you would typically send the form data to your backend
-        console.log('Form submitted:', formData);
-        // Reset form
-        setFormData({
-            name: '',
-            email: '',
-            phone: '',
-            service: '',
-            message: ''
-        });
+
+        if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
+            setStatus({
+                type: 'error',
+                text: 'Email service is not configured yet. Please set EmailJS values in .env and restart the app.'
+            });
+            return;
+        }
+
+        setIsSending(true);
+        setStatus({ type: '', text: '' });
+
+        const selectedService = SERVICE_OPTIONS[formData.service] || formData.service;
+        const templateParams = {
+            to_email: CONTACT_RECEIVER_EMAIL,
+            customer_name: formData.name,
+            customer_email: formData.email,
+            customer_phone: formData.phone,
+            service_name: selectedService,
+            customer_message: formData.message,
+            submitted_at: new Date().toLocaleString()
+        };
+
+        try {
+            await emailjs.send(
+                EMAILJS_SERVICE_ID,
+                EMAILJS_TEMPLATE_ID,
+                templateParams,
+                EMAILJS_PUBLIC_KEY
+            );
+
+            setStatus({
+                type: 'success',
+                text: 'Thank you! Your message was sent successfully. Our team will contact you shortly.'
+            });
+
+            // Reset form after successful send
+            setFormData({
+                name: '',
+                email: '',
+                phone: '',
+                service: '',
+                message: ''
+            });
+        } catch (error) {
+            setStatus({
+                type: 'error',
+                text: 'Unable to send message right now. Please try again in a moment or call us directly.'
+            });
+        } finally {
+            setIsSending(false);
+        }
+
     };
 
     return (
@@ -42,32 +103,36 @@ const Contact = () => {
                             <i className="fas fa-map-marker-alt"></i>
                             <div>
                                 <h3>Location</h3>
-                                <p>555 W Bonita Ave,San Dimas,<br /> CA 91773, United States</p>
+                                <p>{CONTACT_DETAILS.address}</p>
                             </div>
                         </div>
+
                         <div className="info-item">
                             <i className="fas fa-phone"></i>
                             <div>
                                 <h3>Phone</h3>
-                                <p><a href="tel:9095929666">(909) 592-9666</a></p>
-                                <p>Monday - Sunday: 8AM - 6PM</p>
+                                <p><a href={`tel:${CONTACT_DETAILS.phoneDial}`}>{CONTACT_DETAILS.phoneDisplay}</a></p>
+                                <p>{CONTACT_DETAILS.schedule}</p>
                             </div>
                         </div>
+
                         <div className="info-item">
                             <i className="fas fa-clock"></i>
                             <div>
                                 <h3>Hours</h3>
-                                <p>Mon - Sat: 8:00 AM - 6:00 PM<br />Sunday: 8:00 AM - 5:00 PM</p>
+                                <p>{CONTACT_DETAILS.schedule}</p>
                             </div>
                         </div>
+
                         <div className="info-item">
                             <i className="fas fa-envelope"></i>
                             <div>
                                 <h3>Email</h3>
-                                <p><a href="mailto:info@bonitacarwash.com">bonitacarwash27x7@gmail.com</a></p>
+                                <p><a href={`mailto:${CONTACT_DETAILS.email}`}>{CONTACT_DETAILS.email}</a></p>
                             </div>
                         </div>
                     </div>
+
                     <div className="contact-form">
                         <h3>Send us a Message</h3>
                         <form onSubmit={handleSubmit}>
@@ -126,10 +191,21 @@ const Contact = () => {
                                     rows="5"
                                 ></textarea>
                             </div>
-                            <button type="submit" className="btn btn-primary">Send Message</button>
+                            <button type="submit" className="btn btn-primary" disabled={isSending}>
+                                {isSending ? 'Sending...' : 'Send Message'}
+                            </button>
+                            <button type="button" className="btn btn-outline" onClick={() => openBookingForm()}>
+                                Book Through Google Form
+                            </button>
+                            {status.text && (
+                                <p className={`contact-status ${status.type === 'success' ? 'success' : 'error'}`}>
+                                    {status.text}
+                                </p>
+                            )}
                         </form>
                     </div>
                 </div>
+
                 <div className="map-section">
                     <h3>Find Us</h3>
                     <div className="map-container">

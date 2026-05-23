@@ -2,58 +2,16 @@ import React, { useState } from 'react';
 import './Pricing.css';
 import { openBookingForm } from '../utils/booking';
 import { SERVICES } from '../../constants/booking';
+import { DETAILING_PLANS } from '../../constants/siteData';
 
 const Pricing = () => {
     const [selectedPlan, setSelectedPlan] = useState(null);
 
-    const pricingPlans = [
-        {
-            ...SERVICES.ULTRA_DETAIL,
-            features: [
-                '100% Hand Wash',
-                'Wheel Polish',
-                'Clay Treatment',
-                'Exterior Polish',
-                'Carnauba Paste Wax',
-                'Rims Polished',
-                'Interior Shampoo',
-                'Trunk Shampoo',
-                'Main Shampoo',
-                'Scotch Guard',
-                'Polish Headlamps',
-                'Leather Treatment'
-            ],
-            featured: false
-        },
-        {
-            ...SERVICES.LUXURY_DETAIL,
-            features: [
-                'Regular Wash',
-                'Clay Treatment',
-                'Exterior Polish',
-                'Carnauba Paste Wax',
-                'Interior Shampoo',
-                'Trunk Shampoo',
-                'Mats Shampoo',
-                'Wheel Bright',
-                'Complete Dressing'
-            ],
-            featured: true
-        },
-        {
-            ...SERVICES.SUPER_DETAIL,
-            features: [
-                'Regular Wash',
-                'Wheel Bright',
-                'Complete Dressing',
-                'Liquid Carnauba Wax',
-                'Interior Shampoo',
-                'Trunk Shampoo',
-                'Mats Shampoo'
-            ],
-            featured: false
-        }
-    ];
+    const pricingPlans = DETAILING_PLANS.map((plan) => ({
+        ...SERVICES[plan.serviceKey],
+        features: plan.features,
+        featured: plan.featured
+    }));
 
     const handlePlanSelect = (index) => {
         setSelectedPlan(index);

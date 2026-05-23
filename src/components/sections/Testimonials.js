@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Testimonials.css';
 import Review from './Review';
 
@@ -53,9 +54,9 @@ const Testimonials = () => {
                 </div>
 
                 {/* Button moved outside of service-description for mobile */}
-                <button className="service-button">
+                <Link to="/services" className="service-button">
                     Choose Your Service Below <i className="fas fa-chevron-down"></i>
-                </button>
+                </Link>
 
                 <div className="services-list">
                     {[

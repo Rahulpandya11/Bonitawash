@@ -16,8 +16,8 @@ export const openBookingForm = (serviceName = '') => {
         formUrl += `?${params.toString()}`;
     }
     
-    // Open form in new tab
-    window.open(formUrl, '_blank');
+    // Redirect in the same tab to match booking flow expectations
+    window.location.assign(formUrl);
 };
 
 // Function to validate booking time

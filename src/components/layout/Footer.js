@@ -1,21 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
+import { CONTACT_DETAILS, NAV_LINKS } from '../../constants/siteData';
 
 const Footer = () => {
-    const quickLinks = [
-        { text: 'Home', href: '#home' },
-        { text: 'Services', href: '#services' },
-        { text: 'Pricing', href: '#pricing' },
-        { text: 'About Us', href: '#about' },
-        { text: 'Contact', href: '#contact' }
-    ];
+    const quickLinks = NAV_LINKS.map((item) => ({ text: item.label, href: item.path }));
 
     const services = [
-        { text: 'Ultra Detail', href: '#pricing' },
-        { text: 'Luxury Detail', href: '#pricing' },
-        { text: 'Super Detail', href: '#pricing' },
-        { text: 'Wax Polishing', href: '#pricing' },
-        { text: 'Ceramic Coating', href: '#pricing' }
+        { text: 'Ultra Detail', href: '/pricing' },
+        { text: 'Luxury Detail', href: '/pricing' },
+        { text: 'Super Detail', href: '/pricing' },
+        { text: 'Wax Polishing', href: '/services' },
+        { text: 'Ceramic Coating', href: '/services' }
     ];
 
     const socialLinks = [
@@ -52,7 +48,7 @@ const Footer = () => {
                         <ul className="footer-links">
                             {quickLinks.map((link, index) => (
                                 <li key={index}>
-                                    <a href={link.href}>{link.text}</a>
+                                    <Link to={link.href}>{link.text}</Link>
                                 </li>
                             ))}
                         </ul>
@@ -63,7 +59,7 @@ const Footer = () => {
                         <ul className="footer-links">
                             {services.map((service, index) => (
                                 <li key={index}>
-                                    <a href={service.href}>{service.text}</a>
+                                    <Link to={service.href}>{service.text}</Link>
                                 </li>
                             ))}
                         </ul>
@@ -72,12 +68,11 @@ const Footer = () => {
                     <div className="footer-section">
                         <h3 className="footer-title">Contact & Hours</h3>
                         <ul className="footer-contact-list">
-                            <li>555 W Bonita Ave, San Dimas, CA 91773, United States</li>
-                            <li>(909) 592-9666</li>
+                            <li>{CONTACT_DETAILS.address}</li>
                             <li>
-                                Mon - Sat: 8:00 AM - 6:00 PM<br />
-                                Sunday: 8:00 AM - 5:00 PM
+                                <a href={`tel:${CONTACT_DETAILS.phoneDial}`}>{CONTACT_DETAILS.phoneDisplay}</a>
                             </li>
+                            <li>{CONTACT_DETAILS.schedule}</li>
                         </ul>
                     </div>
                 </div>

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import './Header.css';
-import { BOOKING_FORM_URL } from '../../constants/booking';
+import { NAV_LINKS } from '../../constants/siteData';
+import { openBookingForm } from '../../utils/booking';
 
 const Header = () => {
 
@@ -22,13 +24,7 @@ const Header = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
-    const handleNavClick = (e) => {
-        e.preventDefault();
-        const targetId = e.target.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-            targetElement.scrollIntoView({ behavior: 'smooth' });
-        }
+    const handleNavClick = () => {
         setIsMenuOpen(false);
     };
 
@@ -42,7 +38,7 @@ const Header = () => {
         >
             <div className="container">
                 <div className="logo">
-                    <a href="#home" onClick={handleNavClick}>
+                    <Link to="/" onClick={handleNavClick}>
                         <img
                             className="logo-icon"
                             width="40"
@@ -51,24 +47,28 @@ const Header = () => {
                             alt="Bonita Carwash Logo"
                         />
                         <span className="logo-text">Bonita Carwash</span>
-                    </a>
+                    </Link>
                 </div>
 
                 <nav className={`navbar ${isMenuOpen ? 'active' : ''}`}>
                     <ul className="nav-links">
-                        <li><a href="#home" onClick={handleNavClick}>Home</a></li>
-                        <li><a href="#services" onClick={handleNavClick}>Services</a></li>
-                        <li><a href="#gallery" onClick={handleNavClick}>Gallery</a></li>
-                        <li><a href="#pricing" onClick={handleNavClick}>Pricing</a></li>
-                        <li><a href="#about" onClick={handleNavClick}>About Us</a></li>
-                        <li><a href="#testimonials" onClick={handleNavClick}>Reviews</a></li>
-                        <li><a href="#contact" onClick={handleNavClick}>Contact</a></li>
+                        {NAV_LINKS.map((item) => (
+                            <li key={item.path}>
+                                <NavLink
+                                    to={item.path}
+                                    onClick={handleNavClick}
+                                    className={({ isActive }) => (isActive ? 'active-nav-link' : '')}
+                                >
+                                    {item.label}
+                                </NavLink>
+                            </li>
+                        ))}
                     </ul>
                 </nav>
 
                 <button
                     className="btn btn-primary book-now"
-                    onClick={() => window.open(BOOKING_FORM_URL, '_blank')}
+                    onClick={() => openBookingForm()}
                 >
                     Book Now
                 </button>

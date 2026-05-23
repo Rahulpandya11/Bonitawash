@@ -1,8 +1,9 @@
 .footer {
-    background-color: var(--darker);
+    background-color: rgba(5, 10, 20, 0.9);
     padding: 4rem 0 2rem;
     color: var(--light);
     width: 100%;
+    border-top: 1px solid rgba(151, 163, 190, 0.2);
 }
 
 .footer .main-container {
@@ -49,14 +50,14 @@
     width: 35px;
     height: 35px;
     background-color: transparent;
-    border: 1px solid var(--gray);
+    border: 1px solid rgba(151, 163, 190, 0.45);
     color: var(--gray);
     transition: all 0.3s ease;
 }
 
 .social-link:hover {
-    color: var(--light);
-    border-color: var(--light);
+    color: var(--accent-soft);
+    border-color: var(--accent-soft);
 }
 
 .footer-links {
@@ -73,7 +74,7 @@
 }
 
 .footer-links a:hover {
-    color: var(--light);
+    color: var(--accent-soft);
 }
 
 .footer-bottom {
@@ -98,6 +99,15 @@
 .footer-contact-list li {
     font-size: 1rem;
     line-height: 1.5;
+}
+
+.footer-contact-list a {
+    color: var(--gray);
+    text-decoration: none;
+}
+
+.footer-contact-list a:hover {
+    color: var(--accent-soft);
 }
 
 /* Responsive Styles */
