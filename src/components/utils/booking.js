@@ -1,23 +1,17 @@
-import { BOOKING_FORM_URL, SERVICES, BUSINESS_HOURS, FORM_FIELDS } from '../../constants/booking';
+import { BUSINESS_HOURS } from '../../constants/booking';
 
-// Function to open booking form with pre-filled service
+// This function will be called from components that have access to BookingContext
+// The actual modal opening is handled by the context
 export const openBookingForm = (serviceName = '') => {
-    // Get service details
-    const service = Object.values(SERVICES).find(s => s.name === serviceName);
+    // This is now a placeholder - actual implementation uses BookingContext
+    // Components should use: const { openBookingModal } = useBooking();
+    // Then call: openBookingModal(serviceName)
+    console.log('Opening booking modal for:', serviceName);
     
-    // Construct form URL with parameters
-    let formUrl = BOOKING_FORM_URL;
-    
-    if (service) {
-        // Add service parameters to URL
-        const params = new URLSearchParams();
-        params.append('usp', 'pp_url');
-        params.append(FORM_FIELDS.PACKAGE, service.name);
-        formUrl += `?${params.toString()}`;
-    }
-    
-    // Redirect in the same tab to match booking flow expectations
-    window.location.assign(formUrl);
+    // Trigger a custom event that can be caught by the modal
+    window.dispatchEvent(new CustomEvent('openBookingModal', { 
+        detail: { packageName: serviceName } 
+    }));
 };
 
 // Function to validate booking time

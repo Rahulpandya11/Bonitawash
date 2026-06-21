@@ -2,6 +2,7 @@ export const NAV_LINKS = [
     { label: 'Home', path: '/' },
     { label: 'Services', path: '/services' },
     { label: 'Pricing', path: '/pricing' },
+    { label: 'Gift Cards', path: '/gift-cards' },
     { label: 'Gallery', path: '/gallery' },
     { label: 'About', path: '/about' },
     { label: 'Contact', path: '/contact' }
@@ -17,13 +18,25 @@ export const QUICK_STATS = [
 export const SERVICE_PACKAGES = [
     {
         title: 'EXPRESS HAND WASH',
-        price: '$59.95',
+        price: '$64.95',
         features: [
             'Full Service car Wash',
             'Liquid carnauba Wax (applied by hand)',
             'Air Freshener',
             'Tire Dressing',
             'Wheel Bright'
+        ]
+    },
+    {
+        title: 'SPECIAL EXTERIOR CERAMIC',
+        price: '$45.95',
+        features: [
+            'Full service wash',
+            'Ceramic spray protectant',
+            'Enhanced shine & protection',
+            'Wheel Bright',
+            'Complete exterior dressing',
+            'Air freshener'
         ]
     },
     {
@@ -42,7 +55,7 @@ export const SERVICE_PACKAGES = [
     },
     {
         title: '100% HAND WASH',
-        price: '$39.95',
+        price: '$49.95',
         features: [
             'Full service Hand wash',
             'Vacuum Interior',
@@ -55,7 +68,7 @@ export const SERVICE_PACKAGES = [
     },
     {
         title: 'VIP WASH',
-        price: '$28.95',
+        price: '$31.95',
         features: [
             'Full service',
             'Works wash',
@@ -66,7 +79,7 @@ export const SERVICE_PACKAGES = [
     },
     {
         title: 'WORKS WASH',
-        price: '$26.95',
+        price: '$28.95',
         features: [
             'Full Service',
             'Victorian Wash',
@@ -76,7 +89,7 @@ export const SERVICE_PACKAGES = [
     },
     {
         title: 'VICTORIAN WASH',
-        price: '$24.95',
+        price: '$26.95',
         features: [
             'Full service',
             'Foam Bath',
@@ -87,7 +100,7 @@ export const SERVICE_PACKAGES = [
     },
     {
         title: 'HAND WASH & WAX',
-        price: '$74.95',
+        price: '$79.95',
         features: ['Detail hand wax', 'Detail of hand wash']
     },
     {
@@ -113,6 +126,28 @@ export const A_LA_CARTE_SERVICES = [
     { name: 'Interior Dressing', price: '$12' },
     { name: 'Exterior Dressing', price: '$12' },
     { name: 'Complete Int/Ext Dressing', price: '$22' }
+];
+
+export const GIFT_CARDS = [
+    { name: 'Gift Card - $50', price: '$50', description: 'Perfect for a quick wash package' },
+    { name: 'Gift Card - $100', price: '$100', description: 'Great for multiple washes or detailing' },
+    { name: 'Gift Card - $150', price: '$150', description: 'Ideal for premium detailing services' },
+    { name: 'Gift Card - Custom Amount', price: 'Custom', description: 'Choose your own amount' }
+];
+
+export const MULTI_WASH_PACKAGES = [
+    { name: '3 Victorian Washes', originalPrice: '$80.85', price: '$74.95', savings: '$5.90' },
+    { name: '5 Victorian Washes', originalPrice: '$134.75', price: '$124.95', savings: '$9.80' },
+    { name: '3 Works Washes', originalPrice: '$86.85', price: '$79.95', savings: '$6.90' },
+    { name: '5 Works Washes', originalPrice: '$144.75', price: '$134.95', savings: '$9.80' },
+    { name: '3 VIP Washes', originalPrice: '$95.85', price: '$89.95', savings: '$5.90' },
+    { name: '5 VIP Washes', originalPrice: '$159.75', price: '$149.95', savings: '$9.80' }
+];
+
+export const DETAILING_PACKAGES = [
+    { name: 'Ultra 375', price: '$375', description: 'Ultimate detailing package' },
+    { name: 'Luxury 325', price: '$325', description: 'Premium detailing service' },
+    { name: 'Super 275', price: '$275', description: 'Complete detailing package' }
 ];
 
 export const DETAILING_PLANS = [

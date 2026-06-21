@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Hero from '../components/sections/Hero';
+import BeforeAfter from '../components/sections/BeforeAfter';
 import Testimonials from '../components/sections/Testimonials';
 import Compare from '../components/sections/Compare';
 import { HOME_ADDONS, QUICK_STATS } from '../constants/siteData';
@@ -19,6 +20,12 @@ const HomePage = () => {
                     ))}
                 </div>
             </section>
+            <BeforeAfter 
+                beforeImage="/images/home-before-image.png"
+                afterImage="/images/home-after-image.png"
+                title="See The Transformation"
+                subtitle="Slide to reveal the amazing difference our detailing makes"
+            />
             <Testimonials />
             <section className="addons-section">
                 <div className="main-container">

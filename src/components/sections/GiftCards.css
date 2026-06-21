@@ -1,0 +1,361 @@
+.gift-cards {
+    padding: 60px 0;
+    background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
+}
+
+.gift-cards .main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.gift-cards .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #1e3a8a;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.gift-cards .section-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Gift Cards Section */
+.gift-cards-section {
+    margin-bottom: 80px;
+}
+
+.gift-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.gift-card {
+    background: white;
+    border-radius: 15px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    border: 3px solid transparent;
+}
+
+.gift-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.gift-card.selected {
+    border-color: #3b82f6;
+    background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
+}
+
+.gift-card.featured {
+    border-color: #f59e0b;
+    background: linear-gradient(135deg, #fffbeb 0%, #ffffff 100%);
+}
+
+.gift-card.featured::before {
+    content: 'POPULAR';
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #f59e0b;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.gift-card-icon {
+    font-size: 3rem;
+    color: #3b82f6;
+    margin-bottom: 20px;
+}
+
+.gift-card.featured .gift-card-icon {
+    color: #f59e0b;
+}
+
+.gift-card h3 {
+    font-size: 1.5rem;
+    color: #1e3a8a;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.gift-card-price {
+    font-size: 2.5rem;
+    color: #3b82f6;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.gift-card.featured .gift-card-price {
+    color: #f59e0b;
+}
+
+.gift-card-description {
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.gift-card .btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+}
+
+.gift-card-info {
+    background: #f0f9ff;
+    border-left: 4px solid #3b82f6;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+.gift-card-info p {
+    margin: 0;
+    color: #1e40af;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.gift-card-info i {
+    font-size: 1.2rem;
+}
+
+/* Multi-Wash Packages Section */
+.multi-wash-section {
+    padding-top: 60px;
+    border-top: 2px solid #e5e7eb;
+}
+
+.multi-wash-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.multi-wash-card {
+    background: white;
+    border-radius: 15px;
+    padding: 35px 30px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    border: 3px solid transparent;
+}
+
+.multi-wash-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.multi-wash-card.selected {
+    border-color: #3b82f6;
+    background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
+}
+
+.multi-wash-card.featured {
+    border-color: #10b981;
+    background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
+}
+
+.best-value-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+}
+
+.multi-wash-card h3 {
+    font-size: 1.5rem;
+    color: #1e3a8a;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.package-pricing {
+    margin-bottom: 10px;
+}
+
+.original-price {
+    font-size: 1.1rem;
+    color: #9ca3af;
+    text-decoration: line-through;
+    margin-bottom: 5px;
+}
+
+.package-price {
+    font-size: 2.5rem;
+    color: #3b82f6;
+    font-weight: 700;
+}
+
+.multi-wash-card.featured .package-price {
+    color: #10b981;
+}
+
+.package-savings {
+    display: inline-block;
+    background: #dcfce7;
+    color: #166534;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.package-description {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.package-details {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.package-details span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #4b5563;
+    font-size: 0.9rem;
+}
+
+.package-details i {
+    color: #3b82f6;
+}
+
+.multi-wash-card .btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+}
+
+/* Package Benefits */
+.package-benefits {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border-radius: 15px;
+    padding: 40px;
+    margin-top: 40px;
+}
+
+.package-benefits h3 {
+    font-size: 1.8rem;
+    color: #1e3a8a;
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.package-benefits ul {
+    list-style: none;
+    padding: 0;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.package-benefits li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    font-size: 1.05rem;
+    color: #1e40af;
+    background: white;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.package-benefits li:last-child {
+    margin-bottom: 0;
+}
+
+.package-benefits i {
+    color: #10b981;
+    font-size: 1.3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gift-cards {
+        padding: 40px 0;
+    }
+
+    .gift-cards .section-title {
+        font-size: 2rem;
+    }
+
+    .gift-cards-grid,
+    .multi-wash-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .multi-wash-section {
+        padding-top: 40px;
+    }
+
+    .package-benefits {
+        padding: 30px 20px;
+    }
+
+    .package-benefits h3 {
+        font-size: 1.5rem;
+    }
+
+    .package-benefits li {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .gift-card,
+    .multi-wash-card {
+        padding: 30px 20px;
+    }
+
+    .gift-card h3,
+    .multi-wash-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .gift-card-price,
+    .package-price {
+        font-size: 2rem;
+    }
+}
