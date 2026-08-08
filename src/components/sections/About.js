@@ -155,6 +155,42 @@ const About = () => {
                         </div>
                     </div>
                 </div>
+
+                <div className="best-car-wash-section">
+                    <h1>The Best Car Wash in Bonita & San Dimas, CA</h1>
+                    
+                    <p>
+                        Welcome to Bonita Gas and Car Wash, San Dimas's favorite full-service car wash located on Bonita Ave. When locals search for "car wash near me" or the "best car wash in Bonita, California," we're the name people trust — fast, thorough washes paired with an experience the whole family enjoys.
+                    </p>
+
+                    <p>
+                        We're not your average car wash. While your vehicle gets a professional exterior wash and vacuum, treat yourself to our paid massage chairs, browse and collect at our Pokémon cards vending machine, or check out the latest trending TikTok toys at our fun toy counter. It's a car wash experience kids and adults both look forward to.
+                    </p>
+
+                    <p>
+                        Need gas too? We're a full-service gas station and car wash combo, so you can fuel up and get your car sparkling clean in a single stop — saving you time on your daily San Dimas or Bonita commute.
+                    </p>
+
+                    <h2>What makes us San Dimas & Bonita's top-rated car wash:</h2>
+                    
+                    <ul className="features-list">
+                        <li>Professional exterior & interior car wash packages</li>
+                        <li>Full-service gas station on-site</li>
+                        <li>Paid massage chairs to relax while you wait</li>
+                        <li>Pokémon card vending machine — a hit with collectors and kids</li>
+                        <li>Trending TikTok toys counter</li>
+                        <li>Family-friendly atmosphere for the whole crew</li>
+                        <li>Friendly, fast, local service — proudly serving Bonita Ave, San Dimas, La Verne, Glendora, and Claremont drivers</li>
+                    </ul>
+
+                    <p>
+                        Whether you're searching for "car wash near me," "car wash in San Dimas," or the "best car wash in Bonita, California," we're built to be your neighborhood favorite — not just for your car, but for the whole family experience.
+                    </p>
+
+                    <div className="tiktok-store-image">
+                        <img src="/images/Tiktok-store.jpeg" alt="TikTok Toys Store at Bonita Gas and Car Wash" />
+                    </div>
+                </div>
             </div>
         </section>
     );
