@@ -13,7 +13,8 @@ const BookingModal = ({ isOpen, onClose, selectedPackage = '' }) => {
         carNumber: '',
         packageName: selectedPackage,
         date: '',
-        time: '',
+        hours: '',
+        minutes: '',
         timeSlot: 'AM',
         additionalNotes: ''
     });
@@ -43,6 +44,32 @@ const BookingModal = ({ isOpen, onClose, selectedPackage = '' }) => {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
+        
+        // Validate hours (1-12)
+        if (name === 'hours') {
+            const numValue = parseInt(value);
+            if (value === '' || (numValue >= 1 && numValue <= 12)) {
+                setFormData(prev => ({
+                    ...prev,
+                    [name]: value
+                }));
+            }
+            return;
+        }
+        
+        // Validate minutes (00-59)
+        if (name === 'minutes') {
+            const numValue = parseInt(value);
+            if (value === '' || (numValue >= 0 && numValue <= 59)) {
+                const formatted = value ? String(numValue).padStart(2, '0') : '';
+                setFormData(prev => ({
+                    ...prev,
+                    [name]: formatted
+                }));
+            }
+            return;
+        }
+        
         setFormData(prev => ({
             ...prev,
             [name]: value
@@ -98,10 +125,18 @@ const BookingModal = ({ isOpen, onClose, selectedPackage = '' }) => {
             emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
 
             // Format time with AM/PM
-            const formattedTime = `${formData.time} ${formData.timeSlot}`;
+            const formattedTime = `${formData.hours}:${formData.minutes} ${formData.timeSlot}`;
 
             // Create calendar event details
-            const bookingDateTime = new Date(`${formData.date}T${formData.time}`);
+            // Convert 12-hour format to 24-hour format for Date object
+            let hours24 = parseInt(formData.hours);
+            if (formData.timeSlot === 'PM' && hours24 !== 12) {
+                hours24 += 12;
+            } else if (formData.timeSlot === 'AM' && hours24 === 12) {
+                hours24 = 0;
+            }
+            const timeString = `${String(hours24).padStart(2, '0')}:${formData.minutes}`;
+            const bookingDateTime = new Date(`${formData.date}T${timeString}`);
             const endDateTime = new Date(bookingDateTime.getTime() + 2 * 60 * 60 * 1000); // Add 2 hours
             
             // Format dates for calendar (YYYYMMDDTHHMMSS format)
@@ -176,7 +211,8 @@ const BookingModal = ({ isOpen, onClose, selectedPackage = '' }) => {
             carNumber: '',
             packageName: '',
             date: '',
-            time: '',
+            hours: '',
+            minutes: '',
             timeSlot: 'AM',
             additionalNotes: ''
         });
@@ -382,18 +418,34 @@ const BookingModal = ({ isOpen, onClose, selectedPackage = '' }) => {
                         </div>
 
                         <div className="form-group">
-                            <label htmlFor="time">
+                            <label htmlFor="hours">
                                 <i className="fas fa-clock"></i> Preferred Time *
                             </label>
                             <div className="time-picker-group">
                                 <input
-                                    type="time"
-                                    id="time"
-                                    name="time"
-                                    value={formData.time}
+                                    type="number"
+                                    id="hours"
+                                    name="hours"
+                                    value={formData.hours}
                                     onChange={handleChange}
                                     required
-                                    className="time-input"
+                                    className="time-input hours-input"
+                                    placeholder="HH"
+                                    min="1"
+                                    max="12"
+                                />
+                                <span className="time-separator">:</span>
+                                <input
+                                    type="number"
+                                    id="minutes"
+                                    name="minutes"
+                                    value={formData.minutes}
+                                    onChange={handleChange}
+                                    required
+                                    className="time-input minutes-input"
+                                    placeholder="MM"
+                                    min="0"
+                                    max="59"
                                 />
                                 <select
                                     name="timeSlot"
