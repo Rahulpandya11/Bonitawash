@@ -95,6 +95,21 @@ const Compare = () => (
         </tbody>
       </table>
     </div>
+    <div className="compare-mobile-cards">
+      {compareData.map((row, idx) => (
+        <article key={idx} className="compare-mobile-card">
+          <h3 className="compare-mobile-label">{row.label}</h3>
+          <div className="compare-mobile-row">
+            <span className="compare-mobile-head tunnel-header">Tunnel Wash</span>
+            <p>{row.tunnel}</p>
+          </div>
+          <div className="compare-mobile-row">
+            <span className="compare-mobile-head hand-header">Our Hand Wash</span>
+            <p>{row.hand}</p>
+          </div>
+        </article>
+      ))}
+    </div>
   </section>
 );
 

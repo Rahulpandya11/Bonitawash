@@ -29,7 +29,7 @@ html {
 
 body {
     font-family: 'Outfit', sans-serif;
-    background: var(--section-grad);
+    background: linear-gradient(180deg, #07111f 0%, #040a14 100%);
     color: var(--light);
     line-height: 1.6;
     overflow-x: hidden;
@@ -48,6 +48,15 @@ h6 {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    position: relative;
+    z-index: 1;
+}
+
+.app-dotfield-layer {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
 }
 
 .app-main {

@@ -16,6 +16,7 @@ import GiftCardsPage from './pages/GiftCardsPage';
 import GalleryPage from './pages/GalleryPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
+import DotField from './components/background/DotField';
 
 function AppContent() {
     const { isModalOpen, selectedPackage, openBookingModal, closeBookingModal } = useBooking();
@@ -36,6 +37,20 @@ function AppContent() {
     return (
         <>
             <RouteScrollToTop />
+            <div className="app-dotfield-layer" aria-hidden="true">
+                <DotField
+                    dotRadius={1}
+                    dotSpacing={9}
+                    bulgeStrength={142}
+                    glowRadius={170}
+                    sparkle
+                    waveAmplitude={0}
+                    cursorRadius={900}
+                    gradientFrom="rgba(255, 106, 61, 0.26)"
+                    gradientTo="rgba(55, 226, 213, 0.2)"
+                    glowColor="#07131f"
+                />
+            </div>
             <div className="App app-shell">
                 <Header />
                 <main className="app-main">

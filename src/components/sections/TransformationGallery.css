@@ -1,0 +1,39 @@
+.transformation-gallery-section {
+    padding: 5rem 0;
+    background: transparent;
+}
+
+.transformation-gallery-subtitle {
+    text-align: center;
+    color: var(--gray);
+    font-size: 1.1rem;
+    margin: -1.5rem auto 2.5rem;
+    max-width: 680px;
+}
+
+.transformation-gallery-accordion {
+    width: min(100%, 643px);
+    margin: 0 auto;
+    aspect-ratio: 643 / 640;
+}
+
+.transformation-gallery-accordion .accordion-gallery {
+    height: 100% !important;
+}
+
+@media (max-width: 768px) {
+    .transformation-gallery-section {
+        padding: 3rem 0;
+    }
+
+    .transformation-gallery-subtitle {
+        font-size: 1rem;
+        margin-top: -1rem;
+        margin-bottom: 2rem;
+    }
+
+    .transformation-gallery-accordion {
+        width: 100%;
+        aspect-ratio: auto;
+    }
+}

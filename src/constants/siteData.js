@@ -256,3 +256,54 @@ export const HOME_ADDONS = [
         description: 'Choose high-demand time windows instantly through our booking form.'
     }
 ];
+
+export const GOOGLE_PROFILE_REVIEWS = [
+    {
+        name: 'Lalo G.',
+        stars: 5,
+        text: 'Lalo always greet me with a smile and with respect. The service here is top notch and my car always looks magnificent.',
+        link: 'https://share.google/GywTiX2meFbm0Rh9R'
+    },
+    {
+        name: 'Juan M.',
+        stars: 5,
+        text: 'Excellent customer care. The manager Juan really takes care of his customers. Highly recommend for any detailing needs.',
+        link: 'https://share.google/GywTiX2meFbm0Rh9R'
+    },
+    {
+        name: 'Nivea S.',
+        stars: 5,
+        text: 'Warm and friendly attitude at the front register. Great experience every time I come here for over 30 years.',
+        link: 'https://share.google/GywTiX2meFbm0Rh9R'
+    },
+    {
+        name: 'Mary',
+        stars: 5,
+        text: 'Lalo was so kind and helpful. He gave me a great experience, gave recommendations to me & handled my car with care. Great customer service',
+        link: 'https://share.google/hcwwyxfF4o1U45SGh'
+    },
+    {
+        name: 'Karen Lucas',
+        stars: 5,
+        text: 'After a month on the road, this white PHEV was a dingy gray shadow of its best self shellacked in various kinds of bug guts along the nose and grill. Luckily Bonita Car Wash is right off the 57 Fwy and it was so easy to pop in and get the sullied vehicle clean in no time. There is a great indoor area to wait and watch your vehicle getting cleaned. The guys hand-cleaning the interior and waxing the exterior do an impeccable job. Such a fan!',
+        link: 'https://share.google/LgJStddQ1g6lmhYgO'
+    },
+    {
+        name: 'Christi Velasco',
+        stars: 5,
+        text: 'I have been coming to San Dimas car wash for a few years now and have been happy there. But recently, I had an issue with my car and was pretty upset. A shout out to Raj who graciously got back in touch with me and handled my issue to my satisfaction. That service is something that will keep me coming back!',
+        link: 'https://share.google/0He2GIC4RPSMQVXte'
+    },
+    {
+        name: 'Dr. Keith Marshall',
+        stars: 5,
+        text: 'This car wash or should I say car "care" facility is by far the best. People care about their customers. There are quite a few people I could talk about but a few stand out. So thank you to all the car care specialists and a big shout out to "Nivea". She handles the register and assures customers are taken care of. Her attitude is warm and friendly all the time. She does not take one moment or one person for granted. I appreciate her and the other staff.',
+        link: 'https://share.google/6V6cQtpzIUQi5rrQy'
+    },
+    {
+        name: 'Mudra Vyas',
+        stars: 5,
+        text: 'I love bonita car wash! I try and come once a week to get my car washed, the service is always amazing! The guys outside always work hard to make sure my car is clean. I also see the manager Juan making sure that every customer is taken care of.',
+        link: 'https://share.google/u8xDp1LbqEmJOEXvN'
+    }
+];
