@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Testimonials.css';
-import Review from './Review';
+import DomeGallery from './DomeGallery';
+import { GOOGLE_PROFILE_REVIEWS } from '../../constants/siteData';
 
 const Testimonials = () => {
     return (
@@ -37,14 +38,36 @@ const Testimonials = () => {
                         </p>
                     </div>
 
-                    <div className="yelp-reviews-container">
-                        <h2 className="yelp-title">Latest 5-Star Yelp Reviews</h2>
-                        <Review />
-                    </div>
                 </div>
                 
-                <div className="team-image-container">
-                    <div className="team-image">
+                <div className="google-dome-container">
+                    <h2 className="google-dome-title">Google Reviews</h2>
+                    <a
+                        href="https://share.google/MHwVD8p9wDkoAGBwS"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="google-dome-link"
+                    >
+                        View on Google
+                    </a>
+                    <div className="google-dome-gallery">
+                        <DomeGallery
+                            images={GOOGLE_PROFILE_REVIEWS}
+                            fit={0.6}
+                            fitBasis="min"
+                            minRadius={1000}
+                            maxRadius={1600}
+                            padFactor={0.18}
+                            overlayBlurColor="#07131f"
+                            maxVerticalRotationDeg={17}
+                            dragSensitivity={19}
+                            segments={26}
+                            dragDampening={2.4}
+                            imageBorderRadius="16px"
+                            grayscale={false}
+                        />
+                    </div>
+                    <div className="team-image team-image--compact">
                         <img src="/images/testomorinal.jpg" alt="Our Team" />
                     </div>
                     <div className="since-text">

@@ -1,5 +1,5 @@
 .compare-section {
-    background: var(--dark);
+    background: transparent;
     padding: 4rem 0 2rem 0;
     text-align: center;
     font-family: inherit;
@@ -26,6 +26,10 @@
     display: flex;
     justify-content: center;
     width: 100%;
+  }
+
+  .compare-mobile-cards {
+    display: none;
   }
   
   .compare-table {
@@ -100,15 +104,77 @@
   }
   
   @media (max-width: 600px) {
-    .compare-table-wrapper {
-      overflow-x: auto;
+    .compare-section {
+      padding: 3rem 0 1.5rem;
     }
-    .compare-table {
-      min-width: 600px;
-      font-size: 0.95rem;
-    }
+
     .compare-title {
-      font-size: 1.3rem;
+      font-size: 1.55rem;
+      padding: 0 1rem;
+    }
+
+    .compare-subtitle {
+      font-size: 1.02rem;
+      padding: 0 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .compare-table-wrapper {
+      display: none;
+    }
+
+    .compare-mobile-cards {
+      display: grid;
+      gap: 0.9rem;
+      width: min(94%, 560px);
+      margin: 0 auto;
+    }
+
+    .compare-mobile-card {
+      background: rgba(17, 35, 54, 0.88);
+      border: 1px solid rgba(151, 163, 190, 0.36);
+      border-radius: 12px;
+      overflow: hidden;
+      text-align: left;
+    }
+
+    .compare-mobile-label {
+      margin: 0;
+      padding: 0.8rem 1rem;
+      color: var(--accent-soft);
+      background: rgba(4, 11, 20, 0.8);
+      font-size: 1.05rem;
+      border-bottom: 1px solid rgba(151, 163, 190, 0.25);
+    }
+
+    .compare-mobile-row {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid rgba(151, 163, 190, 0.2);
+    }
+
+    .compare-mobile-row:last-child {
+      border-bottom: none;
+    }
+
+    .compare-mobile-head {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      color: var(--light);
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin-bottom: 0.55rem;
+    }
+
+    .compare-mobile-row p {
+      margin: 0;
+      color: var(--light);
+      line-height: 1.55;
+      font-size: 0.98rem;
+    }
+
+    .compare-mobile-row .compare-icon {
+      margin-right: 0.45em;
     }
   }
   

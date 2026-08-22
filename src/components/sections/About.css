@@ -1,5 +1,5 @@
 .about {
-    background: var(--dark);
+    background: transparent;
     padding: 5rem 0;
     width: 100%;
 }
@@ -833,7 +833,7 @@ body.dragging {
 }
 
 .about-extra-section {
-    background: var(--dark); /* Use your project's background variable */
+    background: transparent;
     padding: 3rem 0;
     width: 100%;
 }
@@ -895,7 +895,7 @@ body.dragging {
 
 .about-gallery-section {
     width: 100%;
-    background: var(--dark); /* or your section bg */
+    background: transparent;
     padding: 3rem 0 0 0;
     display: flex;
     flex-direction: column;
