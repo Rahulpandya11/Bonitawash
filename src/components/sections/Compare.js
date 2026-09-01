@@ -69,29 +69,30 @@ const compareData = [
   },
 ];
 
-const detailingBenefits = [
-  'Protects paint from dirt, grime, and environmental damage',
-  'Helps prevent fading, swirl marks, and surface wear',
-  'Keeps your car looking newer for longer',
-  'Improves resale value with a well-maintained appearance',
-  'Makes future cleaning quicker and easier',
+const headlightBenefits = [
+  'Improves nighttime visibility with clearer, brighter headlights',
+  'Removes yellowing, haze, and oxidation buildup',
+  'Enhances your car\'s overall appearance',
+  'Increases safety for you and other drivers on the road',
+  'Affordable alternative to full headlight replacement',
+  'Quick service with long-lasting, noticeable results',
 ];
 
-const detailingImages = [
+const headlightImages = [
   {
-    src: '/images/detailing1.jpg',
-    title: 'Interior Renewal',
-    description: 'Deep cleaning and conditioning that restores comfort, clarity, and freshness inside your vehicle.',
+    src: '/images/detailing3.jpg',
+    title: 'Lens Clarity',
+    description: 'Professional restoration that removes haze and brings back a crisp, clear finish to your headlight lenses.',
   },
   {
     src: '/images/detailing2.jpg',
-    title: 'Paint Protection',
-    description: 'Premium finishing treatments that protect your paint while enhancing gloss, depth, and shine.',
+    title: 'Night Visibility',
+    description: 'Improves brightness and road visibility so your vehicle shines at full strength after dark.',
   },
   {
-    src: '/images/detailing3.jpg',
-    title: 'Finish & Detail',
-    description: 'Expert finishing touches that leave your vehicle looking polished, protected, and road-ready.',
+    src: '/images/detailing1.jpg',
+    title: 'Like-New Look',
+    description: 'Restores the overall look of your vehicle with cleaner, more modern-looking headlights and a refreshed finish.',
   },
 ];
 
@@ -124,15 +125,15 @@ const Compare = () => (
 
     <div className="detailing-showcase">
       <div className="detailing-header">
-        <span className="eyebrow">Detailing Services</span>
-        <h3 className="detailing-title">Car Detailing Services in San Dimas, CA</h3>
+        <span className="eyebrow">Headlight Restoration</span>
+        <h3 className="detailing-title">Headlight Restoration Services in San Dimas, CA</h3>
         <p>
-          Bonita Wash offers professional car detailing services in San Dimas and the surrounding San Gabriel Valley, giving your vehicle the care it deserves inside and out. From a thorough wash and interior cleaning to premium finishing touches like ceramic coating, our detailers help restore and protect your car's appearance while keeping it in top condition.
+          Bonita Wash offers professional headlight restoration services in San Dimas and the surrounding San Gabriel Valley, helping restore clarity and brightness to foggy, yellowed, or hazy headlights. Over time, UV exposure and oxidation cause headlight lenses to dull and discolor — reducing visibility at night and making your car look older than it really is. Our restoration process removes that buildup and brings your headlights back to a clear, like-new finish.
         </p>
       </div>
 
       <div className="detailing-gallery">
-        {detailingImages.map((item) => (
+        {headlightImages.map((item) => (
           <article className="detailing-card" key={item.title}>
             <img src={item.src} alt={item.title} className="detailing-image" />
             <div className="detailing-card-body">
@@ -144,9 +145,9 @@ const Compare = () => (
       </div>
 
       <div className="detailing-benefits">
-        <h4>How car detailing benefits your vehicle:</h4>
+        <h4>How headlight restoration benefits your vehicle:</h4>
         <ul className="detailing-benefits-list">
-          {detailingBenefits.map((benefit) => (
+          {headlightBenefits.map((benefit) => (
             <li key={benefit}>{benefit}</li>
           ))}
         </ul>
