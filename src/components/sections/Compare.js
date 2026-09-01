@@ -69,6 +69,32 @@ const compareData = [
   },
 ];
 
+const detailingBenefits = [
+  'Protects paint from dirt, grime, and environmental damage',
+  'Helps prevent fading, swirl marks, and surface wear',
+  'Keeps your car looking newer for longer',
+  'Improves resale value with a well-maintained appearance',
+  'Makes future cleaning quicker and easier',
+];
+
+const detailingImages = [
+  {
+    src: '/images/detailing1.jpg',
+    title: 'Interior Renewal',
+    description: 'Deep cleaning and conditioning that restores comfort, clarity, and freshness inside your vehicle.',
+  },
+  {
+    src: '/images/detailing2.jpg',
+    title: 'Paint Protection',
+    description: 'Premium finishing treatments that protect your paint while enhancing gloss, depth, and shine.',
+  },
+  {
+    src: '/images/detailing3.jpg',
+    title: 'Finish & Detail',
+    description: 'Expert finishing touches that leave your vehicle looking polished, protected, and road-ready.',
+  },
+];
+
 const Compare = () => (
   <section className="compare-section">
     <h2 className="compare-title">Car Wash vs. Ideal Detail</h2>
@@ -95,6 +121,38 @@ const Compare = () => (
         </tbody>
       </table>
     </div>
+
+    <div className="detailing-showcase">
+      <div className="detailing-header">
+        <span className="eyebrow">Detailing Services</span>
+        <h3 className="detailing-title">Car Detailing Services in San Dimas, CA</h3>
+        <p>
+          Bonita Wash offers professional car detailing services in San Dimas and the surrounding San Gabriel Valley, giving your vehicle the care it deserves inside and out. From a thorough wash and interior cleaning to premium finishing touches like ceramic coating, our detailers help restore and protect your car's appearance while keeping it in top condition.
+        </p>
+      </div>
+
+      <div className="detailing-gallery">
+        {detailingImages.map((item) => (
+          <article className="detailing-card" key={item.title}>
+            <img src={item.src} alt={item.title} className="detailing-image" />
+            <div className="detailing-card-body">
+              <h4>{item.title}</h4>
+              <p>{item.description}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <div className="detailing-benefits">
+        <h4>How car detailing benefits your vehicle:</h4>
+        <ul className="detailing-benefits-list">
+          {detailingBenefits.map((benefit) => (
+            <li key={benefit}>{benefit}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
     <div className="compare-mobile-cards">
       {compareData.map((row, idx) => (
         <article key={idx} className="compare-mobile-card">
