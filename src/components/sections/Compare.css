@@ -28,6 +28,119 @@
     width: 100%;
   }
 
+  .detailing-showcase {
+    width: min(1100px, 92%);
+    margin: 3rem auto 0;
+    padding: clamp(1.5rem, 3vw, 2.75rem);
+    background: rgba(11, 20, 31, 0.76);
+    border: 1px solid rgba(151, 163, 190, 0.28);
+    border-radius: 24px;
+    box-shadow: 0 18px 46px rgba(2, 7, 14, 0.2);
+  }
+
+  .detailing-header {
+    max-width: 760px;
+    margin: 0 auto 2rem;
+    text-align: center;
+  }
+
+  .detailing-header .eyebrow {
+    margin-bottom: 1rem;
+  }
+
+  .detailing-title {
+    font-size: clamp(2rem, 3vw, 3rem);
+    line-height: 1.15;
+    margin-bottom: 1rem;
+    color: var(--light);
+  }
+
+  .detailing-header p {
+    color: var(--light-gray);
+    font-size: 1.06rem;
+    line-height: 1.7;
+  }
+
+  .detailing-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+    margin-top: 2rem;
+  }
+
+  .detailing-card {
+    background: var(--card);
+    border: 1px solid rgba(151, 163, 190, 0.26);
+    border-radius: 18px;
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+  }
+
+  .detailing-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(55, 226, 213, 0.55);
+  }
+
+  .detailing-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .detailing-card-body {
+    padding: 1.1rem 1rem 1.2rem;
+  }
+
+  .detailing-card-body h4 {
+    margin-bottom: 0.5rem;
+    color: var(--light);
+    font-size: 1.2rem;
+  }
+
+  .detailing-card-body p {
+    color: var(--gray);
+    line-height: 1.6;
+    font-size: 0.97rem;
+  }
+
+  .detailing-benefits {
+    margin-top: 2.2rem;
+    text-align: left;
+  }
+
+  .detailing-benefits h4 {
+    margin-bottom: 1rem;
+    font-size: 1.35rem;
+    color: var(--light);
+  }
+
+  .detailing-benefits-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.8rem 1.2rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .detailing-benefits-list li {
+    position: relative;
+    padding-left: 1.6rem;
+    color: var(--light-gray);
+    line-height: 1.6;
+  }
+
+  .detailing-benefits-list li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--accent);
+    font-weight: 700;
+  }
+
   .compare-mobile-cards {
     display: none;
   }
@@ -100,6 +213,12 @@
     }
     .compare-title {
       font-size: 2rem;
+    }
+    .detailing-gallery {
+      grid-template-columns: 1fr;
+    }
+    .detailing-benefits-list {
+      grid-template-columns: 1fr;
     }
   }
   
