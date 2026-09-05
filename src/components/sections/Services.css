@@ -38,7 +38,8 @@
 .service-header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
+    gap: 1rem;
     margin-bottom: 1.5rem;
 }
 
@@ -48,6 +49,7 @@
     color: var(--light);
     max-width: 60%;
     text-transform: uppercase;
+    line-height: 1.1;
 }
 
 .price-tag {
@@ -58,6 +60,7 @@
     font-weight: 700;
     font-size: 1.1rem;
     white-space: nowrap;
+    margin-left: auto;
 }
 
 .service-features {
@@ -99,6 +102,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
     padding: 1rem 1.5rem;
     background: rgba(255, 255, 255, 0.03);
     border-radius: 12px;
@@ -111,9 +115,29 @@
     border-color: rgba(55, 226, 213, 0.7);
 }
 
+.ala-carte-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    flex: 1;
+}
+
 .item-name {
     font-weight: 500;
     color: var(--light);
+}
+
+.item-note {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.4;
+}
+
+.ala-carte-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-shrink: 0;
 }
 
 .item-price {

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './BookingModal.css';
 import emailjs from '@emailjs/browser';
 import { EMAILJS_CONFIG, EMAIL_CONFIG } from '../../config/emailConfig';
-import { SERVICE_PACKAGES, GIFT_CARDS, MULTI_WASH_PACKAGES, DETAILING_PACKAGES } from '../../constants/siteData';
+import { SERVICE_PACKAGES, GIFT_CARDS, MULTI_WASH_PACKAGES, DETAILING_PACKAGES, A_LA_CARTE_SERVICES } from '../../constants/siteData';
 
 const BookingModal = ({ isOpen, onClose, selectedPackage = '' }) => {
     const [formData, setFormData] = useState({
@@ -379,7 +379,17 @@ const BookingModal = ({ isOpen, onClose, selectedPackage = '' }) => {
                                         </option>
                                     ))}
                                 </optgroup>
-                                
+
+                                {/* Add-On Services */}
+                                <optgroup label="💡 Add-On Services">
+                                    {A_LA_CARTE_SERVICES.map((service, index) => (
+                                        <option key={`add-on-${index}`} value={service.name}>
+                                            {service.name} - {service.price}
+                                            {service.note ? ` (${service.note})` : ''}
+                                        </option>
+                                    ))}
+                                </optgroup>
+                                 
                                 {/* Gift Cards */}
                                 <optgroup label="🎁 Gift Cards">
                                     {GIFT_CARDS.map((card, index) => (
