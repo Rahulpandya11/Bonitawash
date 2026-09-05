@@ -41,14 +41,19 @@ const Services = () => {
                     <div className="ala-carte-grid">
                         {A_LA_CARTE_SERVICES.map((item, index) => (
                             <div className="ala-carte-item" key={index}>
-                                <span className="item-name">{item.name}</span>
-                                <span className="item-price">{item.price}</span>
-                                <button 
-                                    className="book-item-btn"
-                                    onClick={() => handleBookPackage(item.name)}
-                                >
-                                    Book
-                                </button>
+                                <div className="ala-carte-copy">
+                                    <span className="item-name">{item.name}</span>
+                                    {item.note && <span className="item-note">{item.note}</span>}
+                                </div>
+                                <div className="ala-carte-actions">
+                                    <span className="item-price">{item.price}</span>
+                                    <button 
+                                        className="book-item-btn"
+                                        onClick={() => handleBookPackage(item.name)}
+                                    >
+                                        Book
+                                    </button>
+                                </div>
                             </div>
                         ))}
                     </div>
