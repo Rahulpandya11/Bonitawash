@@ -109,6 +109,11 @@ export const SERVICE_PACKAGES = [
         features: ['Wash + Hand dry + Tire dressing']
     },
     {
+        title: 'HEADLIGHT RESTORATION',
+        price: '$65',
+        features: ['Restores clarity and brightness', 'Complimentary with complete detail package']
+    },
+    {
         title: 'PET HAIR REMOVAL',
         price: 'From $250',
         features: ['Deep interior cleanup', 'Specialized hair extraction']
