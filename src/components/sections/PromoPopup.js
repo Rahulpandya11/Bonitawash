@@ -17,8 +17,6 @@ export const getActivePromo = (date = new Date()) => {
     });
 };
 
-const dismissedKey = (id) => `promo-dismissed-${id}`;
-
 const PAGE_PROMOS = { '/gift-cards': 'winter-membership' };
 
 const PromoPopup = () => {
@@ -31,21 +29,13 @@ const PromoPopup = () => {
             ? SEASONAL_PROMOS.find(({ id }) => id === pagePromoId)
             : getActivePromo();
         if (!active) return;
-        try {
-            if (sessionStorage.getItem(dismissedKey(active.id))) return;
-        } catch (e) {}
         const timer = setTimeout(() => setPromo(active), 500);
         return () => clearTimeout(timer);
     }, [pathname]);
 
     if (!promo) return null;
 
-    const close = () => {
-        try {
-            sessionStorage.setItem(dismissedKey(promo.id), '1');
-        } catch (e) {}
-        setPromo(null);
-    };
+    const close = () => setPromo(null);
 
     const handleBook = () => {
         close();
