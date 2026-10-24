@@ -2,6 +2,7 @@ import React from 'react';
 import Pricing from '../components/sections/Pricing';
 import PageHero from '../components/layout/PageHero';
 import '../components/sections/Services.css';
+import { openBookingForm } from '../utils/booking';
 import {
     DIAMOND_BAR,
     PREMIUM_WASH_TITLES,
@@ -32,7 +33,7 @@ const PricingPage = () => {
                     </div>
                     <div className="services-grid">
                         {premiumWashes.map((pkg) => (
-                            <div className="service-card" key={pkg.title}>
+                            <div className="service-card bookable" key={pkg.title} onClick={() => openBookingForm(pkg.title)}>
                                 <div className="service-header">
                                     <h3>{pkg.title}</h3>
                                     <div className="price-tag">{pkg.price}*</div>
@@ -44,6 +45,7 @@ const PricingPage = () => {
                                         </li>
                                     ))}
                                 </ul>
+                                <button className="book-package-btn">Book This Package</button>
                             </div>
                         ))}
                     </div>

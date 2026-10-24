@@ -16,6 +16,7 @@ const Pricing = () => {
 
     const handlePlanSelect = (index) => {
         setSelectedPlan(index);
+        openBookingForm(pricingPlans[index].name);
     };
 
     const handleBooking = (e, plan) => {
@@ -54,7 +55,7 @@ const Pricing = () => {
                     <h2 className="section-title">A La Carte Detail</h2>
                     <div className="ala-carte-grid">
                         {DETAIL_A_LA_CARTE.map((item) => (
-                            <div className="ala-carte-item" key={item.name}>
+                            <div className="ala-carte-item bookable" key={item.name} onClick={(e) => handleBooking(e, item)}>
                                 <div className="ala-carte-copy">
                                     <span className="item-name">{item.name}</span>
                                     {item.note && <span className="item-note">{item.note}</span>}

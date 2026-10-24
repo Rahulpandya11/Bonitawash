@@ -112,7 +112,7 @@ export const SERVICE_PACKAGES = [
 
 export const PRICE_DISCLAIMER = '* Prices may vary depending on the type, size, or condition of the vehicle. Final price is confirmed on-site.';
 
-export const WALK_IN_NOTE = 'No appointment needed for car washes. Walk in anytime during business hours and you get the same price listed here.';
+export const WALK_IN_NOTE = 'No appointment needed for car washes. Walk in anytime during business hours for the same price, or book online to reserve a time.';
 
 export const RAIN_GUARANTEE = {
     title: '24-Hour Rain Guarantee',
@@ -381,5 +381,43 @@ export const GOOGLE_PROFILE_REVIEWS = [
         stars: 5,
         text: 'I love bonita car wash! I try and come once a week to get my car washed, the service is always amazing! The guys outside always work hard to make sure my car is clean. I also see the manager Juan making sure that every customer is taken care of.',
         link: 'https://share.google/u8xDp1LbqEmJOEXvN'
+    }
+];
+
+export const weekdayDealOption = (deal) => `${deal.name} (Weekday Deal)`;
+
+const withNote = (item) => (item.note ? ` (${item.note})` : '');
+
+export const BOOKING_OPTION_GROUPS = [
+    {
+        label: '✨ Detail Packages',
+        options: DETAILING_PACKAGES.map((pkg) => ({ value: pkg.name, label: `${pkg.name} - ${pkg.price}` }))
+    },
+    {
+        label: '💎 A La Carte Detail',
+        options: DETAIL_A_LA_CARTE.map((item) => ({ value: item.name, label: `${item.name} - ${item.price}${withNote(item)}` }))
+    },
+    {
+        label: '🚗 Car Wash Packages',
+        options: SERVICE_PACKAGES.map((pkg) => ({ value: pkg.title, label: `${pkg.title} - ${pkg.price}` }))
+    },
+    {
+        label: `📅 ${WEEKDAY_DEALS.title} (${WEEKDAY_DEALS.days})`,
+        options: WEEKDAY_DEALS.deals.map((deal) => ({
+            value: weekdayDealOption(deal),
+            label: `${weekdayDealOption(deal)} - ${deal.price}${deal.originalPrice ? ` (was ${deal.originalPrice})` : ''}${withNote(deal)}`
+        }))
+    },
+    {
+        label: '💡 Car Wash Add-Ons',
+        options: A_LA_CARTE_SERVICES.map((item) => ({ value: item.name, label: `${item.name} - ${item.price}` }))
+    },
+    {
+        label: '💰 Multi-Wash Deals',
+        options: MULTI_WASH_PACKAGES.map((deal) => ({ value: deal.name, label: `${deal.name} - ${deal.price} (Save ${deal.savings})` }))
+    },
+    {
+        label: '🎁 Gift Cards',
+        options: GIFT_CARDS.map((card) => ({ value: card.name, label: `${card.name} - ${card.price}` }))
     }
 ];

@@ -194,7 +194,10 @@ const GiftCards = () => {
                             <div
                                 className={`multi-wash-card ${selectedPackage === index ? 'selected' : ''} ${pkg.featured ? 'featured' : ''}`}
                                 key={index}
-                                onClick={() => handlePackageSelect(index)}
+                                onClick={(e) => {
+                                    handlePackageSelect(index);
+                                    handlePackagePurchase(e, pkg);
+                                }}
                             >
                                 {pkg.featured && <div className="best-value-badge">BEST VALUE</div>}
                                 <h3>{pkg.name}</h3>

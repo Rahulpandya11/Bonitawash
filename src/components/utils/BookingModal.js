@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './BookingModal.css';
 import emailjs from '@emailjs/browser';
 import { EMAILJS_CONFIG, EMAIL_CONFIG } from '../../config/emailConfig';
-import { GIFT_CARDS, MULTI_WASH_PACKAGES, DETAILING_PACKAGES, DETAIL_A_LA_CARTE, PRICE_DISCLAIMER } from '../../constants/siteData';
+import { BOOKING_OPTION_GROUPS, PRICE_DISCLAIMER, RAIN_GUARANTEE } from '../../constants/siteData';
 
 const BookingModal = ({ isOpen, onClose, selectedPackage = '' }) => {
     const [formData, setFormData] = useState({
@@ -361,43 +361,17 @@ const BookingModal = ({ isOpen, onClose, selectedPackage = '' }) => {
                                 className="form-select"
                             >
                                 <option value="">Select a package</option>
-                                
-                                {/* Premium Detailing Packages */}
-                                <optgroup label="✨ Premium Detailing Packages">
-                                    {DETAILING_PACKAGES.map((pkg, index) => (
-                                        <option key={`detailing-${index}`} value={pkg.name}>
-                                            {pkg.name} - {pkg.price}
-                                        </option>
-                                    ))}
-                                </optgroup>
-
-                                <optgroup label="💡 A La Carte Detail">
-                                    {DETAIL_A_LA_CARTE.map((service, index) => (
-                                        <option key={`detail-add-on-${index}`} value={service.name}>
-                                            {service.name} - {service.price}
-                                        </option>
-                                    ))}
-                                </optgroup>
-                                 
-                                {/* Gift Cards */}
-                                <optgroup label="🎁 Gift Cards">
-                                    {GIFT_CARDS.map((card, index) => (
-                                        <option key={`gift-${index}`} value={card.name}>
-                                            {card.name} - {card.price}
-                                        </option>
-                                    ))}
-                                </optgroup>
-                                
-                                {/* Multi-Wash Deals */}
-                                <optgroup label="💰 Multi-Wash Deals (Save Money!)">
-                                    {MULTI_WASH_PACKAGES.map((deal, index) => (
-                                        <option key={`deal-${index}`} value={deal.name}>
-                                            {deal.name} - {deal.price} (Save {deal.savings})
-                                        </option>
-                                    ))}
-                                </optgroup>
+                                {BOOKING_OPTION_GROUPS.map((group) => (
+                                    <optgroup key={group.label} label={group.label}>
+                                        {group.options.map((option) => (
+                                            <option key={option.value} value={option.value}>
+                                                {option.label}
+                                            </option>
+                                        ))}
+                                    </optgroup>
+                                ))}
                             </select>
-                            <small className="form-disclaimer">{PRICE_DISCLAIMER} Car washes are walk-in only and do not need a booking.</small>
+                            <small className="form-disclaimer">{PRICE_DISCLAIMER} Car washes include our {RAIN_GUARANTEE.title.toLowerCase()}.</small>
                         </div>
                     </div>
 

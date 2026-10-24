@@ -306,3 +306,32 @@
     font-style: italic;
     font-size: 0.9rem;
 }
+
+.bookable {
+    cursor: pointer;
+}
+
+button.weekday-deal {
+    font: inherit;
+    text-align: left;
+    color: inherit;
+    border: 1px solid transparent;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+button.weekday-deal:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
+}
+
+.weekday-deal-cta {
+    margin-top: 0.5rem;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+.ala-carte-item.bookable:hover {
+    border-color: rgba(55, 226, 213, 0.6);
+}
