@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './BookingModal.css';
 import emailjs from '@emailjs/browser';
 import { EMAILJS_CONFIG, EMAIL_CONFIG } from '../../config/emailConfig';
-import { SERVICE_PACKAGES, GIFT_CARDS, MULTI_WASH_PACKAGES, DETAILING_PACKAGES, A_LA_CARTE_SERVICES } from '../../constants/siteData';
+import { GIFT_CARDS, MULTI_WASH_PACKAGES, DETAILING_PACKAGES, DETAIL_A_LA_CARTE, PRICE_DISCLAIMER } from '../../constants/siteData';
 
 const BookingModal = ({ isOpen, onClose, selectedPackage = '' }) => {
     const [formData, setFormData] = useState({
@@ -362,15 +362,6 @@ const BookingModal = ({ isOpen, onClose, selectedPackage = '' }) => {
                             >
                                 <option value="">Select a package</option>
                                 
-                                {/* Service Packages */}
-                                <optgroup label="🚗 Car Wash Packages">
-                                    {SERVICE_PACKAGES.map((pkg, index) => (
-                                        <option key={`service-${index}`} value={pkg.title}>
-                                            {pkg.title} - {pkg.price}
-                                        </option>
-                                    ))}
-                                </optgroup>
-                                
                                 {/* Premium Detailing Packages */}
                                 <optgroup label="✨ Premium Detailing Packages">
                                     {DETAILING_PACKAGES.map((pkg, index) => (
@@ -380,12 +371,10 @@ const BookingModal = ({ isOpen, onClose, selectedPackage = '' }) => {
                                     ))}
                                 </optgroup>
 
-                                {/* Add-On Services */}
-                                <optgroup label="💡 Add-On Services">
-                                    {A_LA_CARTE_SERVICES.map((service, index) => (
-                                        <option key={`add-on-${index}`} value={service.name}>
+                                <optgroup label="💡 A La Carte Detail">
+                                    {DETAIL_A_LA_CARTE.map((service, index) => (
+                                        <option key={`detail-add-on-${index}`} value={service.name}>
                                             {service.name} - {service.price}
-                                            {service.note ? ` (${service.note})` : ''}
                                         </option>
                                     ))}
                                 </optgroup>
@@ -408,6 +397,7 @@ const BookingModal = ({ isOpen, onClose, selectedPackage = '' }) => {
                                     ))}
                                 </optgroup>
                             </select>
+                            <small className="form-disclaimer">{PRICE_DISCLAIMER} Car washes are walk-in only and do not need a booking.</small>
                         </div>
                     </div>
 

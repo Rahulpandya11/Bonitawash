@@ -210,3 +210,99 @@
     flex-grow: 1;
     margin-bottom: 1.5rem;
 }
+
+.walk-in-banner,
+.rain-guarantee {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.1rem 1.4rem;
+    border-radius: 14px;
+    background: var(--card);
+    border: 1px solid rgba(55, 226, 213, 0.45);
+    margin-bottom: 2rem;
+}
+
+.walk-in-banner i,
+.rain-guarantee i {
+    font-size: 1.6rem;
+    color: var(--accent);
+}
+
+.walk-in-banner p,
+.rain-guarantee p {
+    color: var(--light-gray);
+    margin: 0;
+}
+
+.rain-guarantee h3 {
+    color: var(--light);
+    margin: 0 0 0.25rem;
+}
+
+.weekday-deals {
+    padding: 1.75rem;
+    border-radius: 16px;
+    border: 1px solid var(--primary);
+    background: linear-gradient(120deg, rgba(255, 106, 61, 0.18), rgba(17, 35, 54, 0.85));
+    margin-bottom: 2rem;
+}
+
+.weekday-deals-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.weekday-deals-header h2 {
+    color: var(--light);
+    margin: 0;
+}
+
+.weekday-deals-header span {
+    color: var(--accent);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.weekday-deals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.weekday-deal {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 1rem;
+    border-radius: 12px;
+    background: rgba(4, 11, 20, 0.55);
+}
+
+.weekday-deal-price {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    margin-top: auto;
+}
+
+.weekday-deal-price s {
+    color: var(--gray);
+}
+
+.weekday-deal-price strong {
+    color: var(--primary);
+    font-size: 1.4rem;
+}
+
+.price-disclaimer {
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--gray);
+    font-style: italic;
+    font-size: 0.9rem;
+}

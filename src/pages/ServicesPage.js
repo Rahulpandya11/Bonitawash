@@ -6,11 +6,11 @@ const ServicesPage = () => {
     return (
         <>
             <PageHero
-                title="Service Menu Designed Around Your Vehicle"
-                subtitle="From fast hand washes to deep restoration, pick exactly what your car needs and book instantly."
-                ctaText="Book Your Service"
-                secondaryText="See Pricing"
-                secondaryPath="/pricing"
+                title="Car Wash Menu"
+                subtitle="No appointment needed. Walk in anytime and pay the same price you see here, with a 24-hour rain guarantee on every wash."
+                ctaText="Book A Detail"
+                secondaryText="See Detail Packages"
+                secondaryPath="/detailing"
             />
             <Services />
         </>

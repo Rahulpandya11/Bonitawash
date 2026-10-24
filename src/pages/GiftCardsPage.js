@@ -6,11 +6,11 @@ const GiftCardsPage = () => {
     return (
         <>
             <PageHero
-                title="Gift Cards & Package Deals"
-                subtitle="Give the gift of a clean car or save with our multi-wash packages"
-                ctaText="Contact Us"
-                secondaryText="View Pricing"
-                secondaryPath="/pricing"
+                title="Gift Cards & Membership"
+                subtitle="Join our car wash membership, give the gift of a clean car, or save with our multi-wash packages."
+                ctaText="Book A Detail"
+                secondaryText="View Membership"
+                secondaryPath="/gift-cards#membership"
             />
             <GiftCards />
         </>

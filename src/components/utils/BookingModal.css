@@ -586,3 +586,11 @@
         font-size: 2.5rem;
     }
 }
+
+.form-disclaimer {
+    display: block;
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: var(--gray, #97a3be);
+}

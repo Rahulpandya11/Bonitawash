@@ -4,7 +4,7 @@ import Hero from '../components/sections/Hero';
 import TransformationGallery from '../components/sections/TransformationGallery';
 import Testimonials from '../components/sections/Testimonials';
 import Compare from '../components/sections/Compare';
-import { HOME_ADDONS, QUICK_STATS } from '../constants/siteData';
+import { DIAMOND_BAR, HOME_ADDONS, QUICK_STATS } from '../constants/siteData';
 
 const HomePage = () => {
     return (
@@ -18,6 +18,18 @@ const HomePage = () => {
                             <span className="stat-label">{stat.label}</span>
                         </div>
                     ))}
+                </div>
+            </section>
+            <section className="addons-section">
+                <div className="main-container">
+                    <div className="area-card">
+                        <div>
+                            <span className="eyebrow">Diamond Bar</span>
+                            <h2>{DIAMOND_BAR.title}</h2>
+                            <p>{DIAMOND_BAR.subtitle}</p>
+                        </div>
+                        <Link to={DIAMOND_BAR.path} className="btn btn-primary">Premium Washes & Details</Link>
+                    </div>
                 </div>
             </section>
             <TransformationGallery />
@@ -34,8 +46,8 @@ const HomePage = () => {
                         ))}
                     </div>
                     <div className="addons-links">
-                        <Link to="/services" className="btn btn-outline">Explore All Services</Link>
-                        <Link to="/pricing" className="btn btn-primary">View Packages</Link>
+                        <Link to="/services" className="btn btn-outline">Car Wash Menu</Link>
+                        <Link to="/detailing" className="btn btn-primary">View Detail Packages</Link>
                     </div>
                 </div>
             </section>

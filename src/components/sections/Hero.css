@@ -144,3 +144,9 @@
         height: 44px;
     }
 } 
+
+.hero-walk-in {
+    margin-top: 1.25rem;
+    color: var(--accent);
+    font-weight: 600;
+}

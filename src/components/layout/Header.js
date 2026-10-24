@@ -70,7 +70,7 @@ const Header = () => {
                     className="btn btn-primary book-now"
                     onClick={() => openBookingForm()}
                 >
-                    Book Now
+                    Book a Detail
                 </button>
 
                 <button className="mobile-menu-btn" onClick={toggleMenu}>

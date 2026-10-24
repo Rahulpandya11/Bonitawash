@@ -1,23 +1,57 @@
 import React from 'react';
 import './Services.css';
-import { openBookingForm } from '../../utils/booking';
-import { A_LA_CARTE_SERVICES, SERVICE_PACKAGES } from '../../constants/siteData';
+import {
+    A_LA_CARTE_SERVICES,
+    PRICE_DISCLAIMER,
+    RAIN_GUARANTEE,
+    SERVICE_PACKAGES,
+    WALK_IN_NOTE,
+    WEEKDAY_DEALS
+} from '../../constants/siteData';
 
 const Services = () => {
-    const handleBookPackage = (packageName) => {
-        openBookingForm(packageName);
-    };
-
     return (
         <section className="services" id="services">
             <div className="main-container">
+                <div className="walk-in-banner">
+                    <i className="fas fa-walking"></i>
+                    <p>{WALK_IN_NOTE}</p>
+                </div>
+
+                <div className="weekday-deals">
+                    <div className="weekday-deals-header">
+                        <h2>{WEEKDAY_DEALS.title}</h2>
+                        <span>{WEEKDAY_DEALS.days}</span>
+                    </div>
+                    <div className="weekday-deals-grid">
+                        {WEEKDAY_DEALS.deals.map((deal) => (
+                            <div className="weekday-deal" key={deal.name}>
+                                <span className="item-name">{deal.name}</span>
+                                {deal.note && <span className="item-note">{deal.note}</span>}
+                                <div className="weekday-deal-price">
+                                    {deal.originalPrice && <s>{deal.originalPrice}</s>}
+                                    <strong>{deal.price}</strong>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="rain-guarantee">
+                    <i className="fas fa-cloud-rain"></i>
+                    <div>
+                        <h3>{RAIN_GUARANTEE.title}</h3>
+                        <p>{RAIN_GUARANTEE.description}</p>
+                    </div>
+                </div>
+
                 <h2 className="section-title">Professional Car Wash Packages</h2>
                 <div className="services-grid">
                     {SERVICE_PACKAGES.map((pkg, index) => (
                         <div className="service-card" key={index}>
                             <div className="service-header">
                                 <h3>{pkg.title}</h3>
-                                <div className="price-tag">{pkg.price}</div>
+                                <div className="price-tag">{pkg.price}*</div>
                             </div>
                             <ul className="service-features">
                                 {pkg.features.map((feature, fIndex) => (
@@ -26,12 +60,6 @@ const Services = () => {
                                     </li>
                                 ))}
                             </ul>
-                            <button 
-                                className="book-package-btn"
-                                onClick={() => handleBookPackage(pkg.title)}
-                            >
-                                Book This Package
-                            </button>
                         </div>
                     ))}
                 </div>
@@ -47,17 +75,13 @@ const Services = () => {
                                 </div>
                                 <div className="ala-carte-actions">
                                     <span className="item-price">{item.price}</span>
-                                    <button 
-                                        className="book-item-btn"
-                                        onClick={() => handleBookPackage(item.name)}
-                                    >
-                                        Book
-                                    </button>
                                 </div>
                             </div>
                         ))}
                     </div>
                 </div>
+
+                <p className="price-disclaimer">{PRICE_DISCLAIMER}</p>
             </div>
         </section>
     );

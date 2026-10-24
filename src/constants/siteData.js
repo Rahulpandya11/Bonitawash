@@ -1,8 +1,8 @@
 export const NAV_LINKS = [
     { label: 'Home', path: '/' },
-    { label: 'Services', path: '/services' },
-    { label: 'Pricing', path: '/pricing' },
-    { label: 'Gift Cards', path: '/gift-cards' },
+    { label: 'Car Wash', path: '/services' },
+    { label: 'Detailing', path: '/detailing' },
+    { label: 'Gift Cards & Membership', path: '/gift-cards' },
     { label: 'Gallery', path: '/gallery' },
     { label: 'About', path: '/about' },
     { label: 'Contact', path: '/contact' }
@@ -105,20 +105,90 @@ export const SERVICE_PACKAGES = [
     },
     {
         title: 'EXTERIOR WASH ONLY',
-        price: '$14.95',
-        features: ['Wash + Hand dry + Tire dressing']
-    },
-    {
-        title: 'HEADLIGHT RESTORATION',
-        price: '$65',
-        features: ['Restores clarity and brightness', 'Complimentary with complete detail package']
-    },
-    {
-        title: 'PET HAIR REMOVAL',
-        price: 'From $250',
-        features: ['Deep interior cleanup', 'Specialized hair extraction']
+        price: '$18.95',
+        features: ['Wash + Hand dry', 'No tire dressing']
     }
 ];
+
+export const PRICE_DISCLAIMER = '* Prices may vary depending on the type, size, or condition of the vehicle. Final price is confirmed on-site.';
+
+export const WALK_IN_NOTE = 'No appointment needed for car washes. Walk in anytime during business hours and you get the same price listed here.';
+
+export const RAIN_GUARANTEE = {
+    title: '24-Hour Rain Guarantee',
+    description: 'If it rains within 24 hours of your wash, bring your car back and we will take care of the exterior again at no charge.'
+};
+
+export const WEEKDAY_DEALS = {
+    title: 'Weekday Deals',
+    days: 'Monday - Friday',
+    deals: [
+        { name: 'Regular Wash', price: '$22.95' },
+        { name: 'Special Exterior Ceramic Spray Wax', originalPrice: '$45.95', price: '$40.95' },
+        { name: '100% Hand Wash', originalPrice: '$49.95', price: '$41.95' },
+        { name: 'Exterior Wash Only', price: '$18.95', note: 'No tire dressing' }
+    ]
+};
+
+export const DETAIL_A_LA_CARTE = [
+    { name: 'Ceramic Coating (Ceramic Pro)', price: 'Free Quote' },
+    { name: 'Clay, Buff & Wax', price: '$225' },
+    { name: 'Interior Shampoo', price: '$220' },
+    { name: 'Clay Wax', price: '$160' },
+    { name: 'Carpets Shampoo', price: '$150' },
+    { name: 'Seats Shampoo', price: '$150' },
+    { name: 'Leather Clean & Condition', price: '$125' },
+    { name: 'Carnauba Paste Wax', price: '$125' },
+    { name: 'Door Panels', price: '$100' },
+    { name: 'Head Lamps Restoration', price: '$65', note: 'Complimentary with complete detail package' },
+    { name: 'Pet Hair Removal', price: 'Free Quote', note: 'Starting from $250' }
+];
+
+// Month is 1-12; windows repeat every year. A window whose end is before its start wraps over New Year.
+export const SEASONAL_PROMOS = [
+    {
+        id: 'halloween',
+        start: { month: 10, day: 20 },
+        end: { month: 10, day: 31 },
+        emoji: '🎃',
+        eyebrow: 'Halloween Special | Oct 26 - Oct 31',
+        title: '10% Off All Car Washes',
+        description: 'Show the cashier that you follow us on Instagram and get 10% off any car wash, applied at the end of billing.',
+        secondary: 'Detail offer: 20% off our Ultra 375 detail (most expensive package). Limited to 3 cars per day, so book ahead.',
+        ctaText: 'Book Ultra Detail',
+        ctaPackage: 'Ultra 375'
+    },
+    {
+        id: 'winter-membership',
+        start: { month: 11, day: 1 },
+        end: { month: 2, day: 29 },
+        eyebrow: 'Winter Membership',
+        title: 'Keep Your Car Clean All Winter',
+        description: 'Sign up for a car wash membership and wash as often as you need through the rainy season. Ask our cashier on your next visit or contact us to sign up.',
+        ctaText: 'View Memberships',
+        ctaPath: '/gift-cards#membership'
+    }
+];
+
+export const MEMBERSHIP = {
+    title: 'Car Wash Membership',
+    subtitle: 'Rain, mud and road grime all season long? A membership keeps your car clean all winter long.',
+    benefits: [
+        'Keep your car clean all season',
+        'Every wash comes with our 24-hour rain guarantee',
+        'No appointment needed, just drive in',
+        'Sign up at the register in minutes'
+    ],
+    howToJoin: 'Ask our cashier on your next visit, or call us to sign up.'
+};
+
+export const PREMIUM_WASH_TITLES = ['HAND WASH & WAX', 'EXPRESS HAND WASH', '100% HAND WASH', 'SPECIAL EXTERIOR CERAMIC'];
+
+export const DIAMOND_BAR = {
+    title: 'Now Serving Diamond Bar',
+    subtitle: 'Just off the 57 Freeway, a short drive from Diamond Bar. Premium hand washes, full details and Ceramic Pro coating, with walk-ins welcome for every wash.',
+    path: '/detailing'
+};
 
 export const A_LA_CARTE_SERVICES = [
     { name: 'Ceramic Spray Protectant', price: '$25' },

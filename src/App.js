@@ -16,6 +16,7 @@ import GiftCardsPage from './pages/GiftCardsPage';
 import GalleryPage from './pages/GalleryPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
+import PromoPopup from './components/sections/PromoPopup';
 import DotField from './components/background/DotField';
 
 function AppContent() {
@@ -57,7 +58,8 @@ function AppContent() {
                     <Routes>
                         <Route path="/" element={<HomePage />} />
                         <Route path="/services" element={<ServicesPage />} />
-                        <Route path="/pricing" element={<PricingPage />} />
+                        <Route path="/detailing" element={<PricingPage />} />
+                        <Route path="/pricing" element={<Navigate to="/detailing" replace />} />
                         <Route path="/gift-cards" element={<GiftCardsPage />} />
                         <Route path="/gallery" element={<GalleryPage />} />
                         <Route path="/about" element={<AboutPage />} />
@@ -69,6 +71,7 @@ function AppContent() {
                 <Footer />
                 <ScrollToTop />
             </div>
+            <PromoPopup />
             <BookingModal 
                 isOpen={isModalOpen} 
                 onClose={closeBookingModal}

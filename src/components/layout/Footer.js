@@ -7,11 +7,11 @@ const Footer = () => {
     const quickLinks = NAV_LINKS.map((item) => ({ text: item.label, href: item.path }));
 
     const services = [
-        { text: 'Ultra Detail', href: '/pricing' },
-        { text: 'Luxury Detail', href: '/pricing' },
-        { text: 'Super Detail', href: '/pricing' },
+        { text: 'Ultra Detail', href: '/detailing' },
+        { text: 'Luxury Detail', href: '/detailing' },
+        { text: 'Super Detail', href: '/detailing' },
         { text: 'Wax Polishing', href: '/services' },
-        { text: 'Ceramic Coating', href: '/services' }
+        { text: 'Ceramic Coating', href: '/detailing' }
     ];
 
     const socialLinks = [

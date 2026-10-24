@@ -270,3 +270,34 @@ section {
         width: 100%;
     }
 }
+.area-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1.75rem 2rem;
+    border-radius: 16px;
+    border: 1px solid var(--primary);
+    background: linear-gradient(120deg, rgba(255, 106, 61, 0.2), rgba(17, 35, 54, 0.9));
+}
+
+.area-card h2 {
+    color: var(--light);
+    margin: 0.35rem 0 0.5rem;
+}
+
+.area-card p {
+    color: var(--light-gray);
+}
+
+.area-card .btn {
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .area-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.4rem;
+    }
+}

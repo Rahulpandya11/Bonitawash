@@ -359,3 +359,25 @@
         font-size: 2rem;
     }
 }
+
+.membership-section {
+    margin-bottom: 80px;
+    scroll-margin-top: 100px;
+}
+
+.membership-section .package-benefits {
+    margin-top: 0;
+}
+
+.membership-join {
+    text-align: center;
+    color: #1e3a8a;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.membership-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}

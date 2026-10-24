@@ -1,10 +1,21 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import './GiftCards.css';
 import { openBookingForm } from '../utils/booking';
+import { CONTACT_DETAILS, MEMBERSHIP } from '../../constants/siteData';
 
 const GiftCards = () => {
     const [selectedCard, setSelectedCard] = useState(null);
     const [selectedPackage, setSelectedPackage] = useState(null);
+    const { hash } = useLocation();
+
+    useEffect(() => {
+        if (hash !== '#membership') return;
+        const timer = setTimeout(() => {
+            document.getElementById('membership')?.scrollIntoView({ behavior: 'smooth' });
+        }, 500);
+        return () => clearTimeout(timer);
+    }, [hash]);
 
     const giftCards = [
         {
@@ -117,6 +128,24 @@ const GiftCards = () => {
     return (
         <section className="gift-cards">
             <div className="main-container">
+                <div className="membership-section" id="membership">
+                    <h2 className="section-title">{MEMBERSHIP.title}</h2>
+                    <p className="section-subtitle">{MEMBERSHIP.subtitle}</p>
+                    <div className="package-benefits">
+                        <ul>
+                            {MEMBERSHIP.benefits.map((benefit) => (
+                                <li key={benefit}><i className="fas fa-check-circle"></i> {benefit}</li>
+                            ))}
+                        </ul>
+                        <p className="membership-join">{MEMBERSHIP.howToJoin}</p>
+                        <div className="membership-actions">
+                            <a href={`tel:${CONTACT_DETAILS.phoneDial}`} className="btn btn-primary">
+                                Call {CONTACT_DETAILS.phoneDisplay}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
                 {/* Gift Cards Section */}
                 <div className="gift-cards-section">
                     <h2 className="section-title">Gift Cards</h2>
