@@ -171,7 +171,8 @@ export const SEASONAL_PROMOS = [
 ];
 
 export const MEMBERSHIP = {
-    title: 'Car Wash Membership',
+    eyebrow: 'Winter Membership',
+    title: 'Winter Car Wash Membership',
     subtitle: 'Rain, mud and road grime all season long? A membership keeps your car clean all winter long.',
     benefits: [
         'Keep your car clean all season',

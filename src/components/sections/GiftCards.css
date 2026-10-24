@@ -381,3 +381,16 @@
     justify-content: center;
     margin-top: 20px;
 }
+
+.membership-eyebrow {
+    display: table;
+    margin: 0 auto 12px;
+    padding: 6px 16px;
+    border-radius: 999px;
+    background: #e0f2fe;
+    color: #0369a1;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.85rem;
+}

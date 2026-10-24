@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './PromoPopup.css';
 import { openBookingForm } from '../../utils/booking';
 import { SEASONAL_PROMOS } from '../../constants/siteData';
@@ -19,18 +19,24 @@ export const getActivePromo = (date = new Date()) => {
 
 const dismissedKey = (id) => `promo-dismissed-${id}`;
 
+const PAGE_PROMOS = { '/gift-cards': 'winter-membership' };
+
 const PromoPopup = () => {
     const [promo, setPromo] = useState(null);
+    const { pathname } = useLocation();
 
     useEffect(() => {
-        const active = getActivePromo();
+        const pagePromoId = PAGE_PROMOS[pathname];
+        const active = pagePromoId
+            ? SEASONAL_PROMOS.find(({ id }) => id === pagePromoId)
+            : getActivePromo();
         if (!active) return;
         try {
             if (sessionStorage.getItem(dismissedKey(active.id))) return;
         } catch (e) {}
         const timer = setTimeout(() => setPromo(active), 500);
         return () => clearTimeout(timer);
-    }, []);
+    }, [pathname]);
 
     if (!promo) return null;
 

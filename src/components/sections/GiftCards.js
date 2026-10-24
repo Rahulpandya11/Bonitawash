@@ -129,6 +129,7 @@ const GiftCards = () => {
         <section className="gift-cards">
             <div className="main-container">
                 <div className="membership-section" id="membership">
+                    <div className="membership-eyebrow"><i className="fas fa-snowflake"></i> {MEMBERSHIP.eyebrow}</div>
                     <h2 className="section-title">{MEMBERSHIP.title}</h2>
                     <p className="section-subtitle">{MEMBERSHIP.subtitle}</p>
                     <div className="package-benefits">
