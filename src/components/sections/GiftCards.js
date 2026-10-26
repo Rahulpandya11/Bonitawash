@@ -132,6 +132,26 @@ const GiftCards = () => {
                     <div className="membership-eyebrow"><i className="fas fa-snowflake"></i> {MEMBERSHIP.eyebrow}</div>
                     <h2 className="section-title">{MEMBERSHIP.title}</h2>
                     <p className="section-subtitle">{MEMBERSHIP.subtitle}</p>
+                    <div className="multi-wash-grid membership-plans">
+                        {MEMBERSHIP.plans.map((plan) => (
+                            <div
+                                className="multi-wash-card"
+                                key={plan.name}
+                                onClick={() => openBookingForm(plan.name)}
+                            >
+                                <h3>{plan.name}</h3>
+                                <div className="package-pricing">
+                                    <div className="package-price">{plan.price}</div>
+                                </div>
+                                <div className="package-savings">Unlimited* / month</div>
+                                <div className="package-details">
+                                    <span><i className="fas fa-check"></i> {plan.features} Wash Features</span>
+                                </div>
+                                <button className="btn btn-primary">Buy Membership</button>
+                            </div>
+                        ))}
+                    </div>
+                    <p className="membership-disclaimer">{MEMBERSHIP.disclaimer}</p>
                     <div className="package-benefits">
                         <ul>
                             {MEMBERSHIP.benefits.map((benefit) => (

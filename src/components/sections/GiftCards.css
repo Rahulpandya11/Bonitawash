@@ -394,3 +394,15 @@
     letter-spacing: 0.08em;
     font-size: 0.85rem;
 }
+
+.membership-plans .multi-wash-card {
+    cursor: pointer;
+}
+
+.membership-disclaimer {
+    text-align: center;
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #666;
+    margin: 10px 0 30px;
+}

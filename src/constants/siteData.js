@@ -173,7 +173,13 @@ export const SEASONAL_PROMOS = [
 export const MEMBERSHIP = {
     eyebrow: 'Winter Membership',
     title: 'Winter Car Wash Membership',
-    subtitle: 'Rain, mud and road grime all season long? A membership keeps your car clean all winter long.',
+    subtitle: 'Rain, mud and road grime all season long? An unlimited monthly pass keeps your car clean all winter long.',
+    plans: [
+        { name: 'Exterior Wash Monthly Pass', price: '$49.95', features: 6 },
+        { name: 'Victorian Wash Monthly Pass', price: '$78.95', features: 12 },
+        { name: 'VIP Wash Membership', price: '$98.95', features: 15 }
+    ],
+    disclaimer: '* Unlimited washes. The carwash is subject to close during acts of God, lunch breaks or any unforeseen circumstances.',
     benefits: [
         'Keep your car clean all season',
         'Every wash comes with our 24-hour rain guarantee',
@@ -396,6 +402,10 @@ export const BOOKING_OPTION_GROUPS = [
     {
         label: '💎 A La Carte Detail',
         options: DETAIL_A_LA_CARTE.map((item) => ({ value: item.name, label: `${item.name} - ${item.price}${withNote(item)}` }))
+    },
+    {
+        label: '❄️ Unlimited Memberships (Monthly)',
+        options: MEMBERSHIP.plans.map((plan) => ({ value: plan.name, label: `${plan.name} - ${plan.price}/month (Unlimited*)` }))
     },
     {
         label: '🚗 Car Wash Packages',
