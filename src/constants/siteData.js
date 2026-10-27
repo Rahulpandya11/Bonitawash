@@ -283,36 +283,20 @@ export const DETAILING_PLANS = [
 
 export const GALLERY_IMAGES = [
     {
-        src: '/images/20250122-DSC04917-2-Enhanced-NR.jpg',
-        caption: 'After Exterior'
+        src: '/images/gallery-suv-hand-rinse.jpg',
+        caption: 'SUV Hand Rinse'
     },
     {
-        src: '/images/washing-the-suv-car.jpg',
-        caption: 'Wash Process'
+        src: '/images/gallery-suv-wash-lane.jpg',
+        caption: 'Fresh Out of the Wash Lane'
     },
     {
-        src: '/images/20250225-DSC04950-Enhanced-NR.jpg',
-        caption: 'Interior Deep Clean'
+        src: '/images/gallery-van-exterior-wash.jpg',
+        caption: 'Work Van Exterior Wash'
     },
     {
-        src: '/images/20250225-DSC04921-Enhanced-NR.jpg',
-        caption: 'Hand Wax Application'
-    },
-    {
-        src: '/images/multistore.jpg',
-        caption: 'Multi Store'
-    },
-    {
-        src: '/images/after-shampoo.jpg',
-        caption: 'After Shampoo'
-    },
-    {
-        src: '/images/dent-removal.jpg',
-        caption: 'Detailing'
-    },
-    {
-        src: '/images/20250225-DSC04946-Enhanced-NR.jpg',
-        caption: 'Leather Work'
+        src: '/images/gallery-van-hand-wash.jpg',
+        caption: 'Work Van Hand Wash'
     }
 ];
 

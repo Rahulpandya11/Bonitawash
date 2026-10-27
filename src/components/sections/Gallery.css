@@ -38,7 +38,7 @@
     position: relative;
     overflow: hidden;
     border-radius: 14px;
-    aspect-ratio: 4/3;
+    aspect-ratio: 3/4;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(151, 163, 190, 0.25);
 }
