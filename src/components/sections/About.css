@@ -1044,6 +1044,17 @@ body.dragging {
     transform: scale(1.03);
 }
 
+.tiktok-store-images {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.tiktok-store-images .tiktok-store-image {
+    margin-top: 0;
+}
+
 /* Responsive styles for new section */
 @media (max-width: 768px) {
     .best-car-wash-section {
@@ -1105,5 +1116,10 @@ body.dragging {
     .tiktok-store-image {
         margin-top: 2rem;
         border-radius: 8px;
+    }
+
+    .tiktok-store-images {
+        grid-template-columns: 1fr;
+        margin-top: 2rem;
     }
 } 

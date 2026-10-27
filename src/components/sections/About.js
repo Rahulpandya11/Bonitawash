@@ -187,8 +187,13 @@ const About = () => {
                         Whether you're searching for "car wash near me," "car wash in San Dimas," or the "best car wash in Bonita, California," we're built to be your neighborhood favorite — not just for your car, but for the whole family experience.
                     </p>
 
-                    <div className="tiktok-store-image">
-                        <img src="/images/Tiktok-store.jpeg" alt="TikTok Toys Store at Bonita Gas and Car Wash" />
+                    <div className="tiktok-store-images">
+                        <div className="tiktok-store-image">
+                            <img src="/images/store-pokemon-toys-candy.jpg" alt="Pokémon card vending machine, plush toys and candy at Bonita Gas and Car Wash" />
+                        </div>
+                        <div className="tiktok-store-image">
+                            <img src="/images/store-toys-sunglasses-hats.jpg" alt="Trending toys, sunglasses and hats at Bonita Gas and Car Wash" />
+                        </div>
                     </div>
                 </div>
             </div>
